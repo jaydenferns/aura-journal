@@ -1,0 +1,51 @@
+globalThis.__BUILD_MANIFEST = {
+  "pages": {
+    "/_app": [
+      "static/chunks/20e33_next_dist_compiled_c5d00b31._.js",
+      "static/chunks/20e33_next_dist_shared_lib_8e9e186a._.js",
+      "static/chunks/20e33_next_dist_client_e9e154a9._.js",
+      "static/chunks/20e33_next_dist_b9c5fee3._.js",
+      "static/chunks/20e33_next_app_0fa0335d.js",
+      "static/chunks/[next]_entry_page-loader_ts_4c90b7ae._.js",
+      "static/chunks/20e33_react-dom_0db84f9d._.js",
+      "static/chunks/20e33_36a0c67e._.js",
+      "static/chunks/[root-of-the-server]__3721965e._.js",
+      "static/chunks/aura-frontend_pages__app_2da965e7._.js",
+      "static/chunks/turbopack-aura-frontend_pages__app_dc600467._.js"
+    ],
+    "/_error": [
+      "static/chunks/20e33_next_dist_compiled_c5d00b31._.js",
+      "static/chunks/20e33_next_dist_shared_lib_fca9f20b._.js",
+      "static/chunks/20e33_next_dist_client_e9e154a9._.js",
+      "static/chunks/20e33_next_dist_9374494e._.js",
+      "static/chunks/20e33_next_error_7caf9e1c.js",
+      "static/chunks/[next]_entry_page-loader_ts_4567b62b._.js",
+      "static/chunks/20e33_react-dom_0db84f9d._.js",
+      "static/chunks/20e33_36a0c67e._.js",
+      "static/chunks/[root-of-the-server]__bd25fd50._.js",
+      "static/chunks/aura-frontend_pages__error_2da965e7._.js",
+      "static/chunks/turbopack-aura-frontend_pages__error_292182ab._.js"
+    ]
+  },
+  "devFiles": [],
+  "polyfillFiles": [
+    "static/chunks/20e33_next_dist_build_polyfills_polyfill-nomodule.js"
+  ],
+  "lowPriorityFiles": [],
+  "rootMainFiles": [
+    "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_2e110ba2._.js",
+    "static/chunks/20e33_next_dist_compiled_react-dom_d20895b7._.js",
+    "static/chunks/20e33_next_dist_compiled_react-server-dom-turbopack_19ab7629._.js",
+    "static/chunks/20e33_next_dist_compiled_next-devtools_index_84929753.js",
+    "static/chunks/20e33_next_dist_compiled_0e010ae0._.js",
+    "static/chunks/20e33_next_dist_client_6d23f8da._.js",
+    "static/chunks/20e33_next_dist_75f57039._.js",
+    "static/chunks/20e33_@swc_helpers_cjs_86578466._.js",
+    "static/chunks/aura-frontend_a0ff3932._.js",
+    "static/chunks/turbopack-aura-frontend_8348aafa._.js"
+  ]
+};
+globalThis.__BUILD_MANIFEST.lowPriorityFiles = [
+"/static/" + process.env.__NEXT_BUILD_ID + "/_buildManifest.js",
+"/static/" + process.env.__NEXT_BUILD_ID + "/_ssgManifest.js"
+];

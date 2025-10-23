@@ -1,0 +1,793 @@
+[00:00:01.720] Server  LOG      ✓ Ready in 1163ms
+[00:00:09.545] Server  LOG      ○ Compiling / ...
+[00:00:10.077] Server  ERROR    ⨯ ./aura-frontend/app/LoginScreen.tsx:3:1
+Export auth doesn't exist in target module
+  1 | 'use client';
+  2 |
+> 3 | import { auth } from './firebaseConfig';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { GoogleAuthProvider, signInWithPopup, signInAnonymously } from 'firebase/auth';
+  5 | import { Sparkles } from 'lucide-react';
+  6 |
+
+The export auth was not found in module [project]/aura-frontend/app/firebaseConfig.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./aura-frontend/app/LoginScreen.tsx [Client Component Browser]
+    ./aura-frontend/app/page.tsx [Client Component Browser]
+    ./aura-frontend/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./aura-frontend/app/LoginScreen.tsx [Client Component SSR]
+    ./aura-frontend/app/page.tsx [Client Component SSR]
+    ./aura-frontend/app/page.tsx [Server Component]
+
+
+
+./aura-frontend/app/LoginScreen.tsx:3:1
+Export auth doesn't exist in target module
+  1 | 'use client';
+  2 |
+> 3 | import { auth } from './firebaseConfig';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { GoogleAuthProvider, signInWithPopup, signInAnonymously } from 'firebase/auth';
+  5 | import { Sparkles } from 'lucide-react';
+  6 |
+
+The export auth was not found in module [project]/aura-frontend/app/firebaseConfig.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./aura-frontend/app/LoginScreen.tsx [Client Component Browser]
+    ./aura-frontend/app/page.tsx [Client Component Browser]
+    ./aura-frontend/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./aura-frontend/app/LoginScreen.tsx [Client Component SSR]
+    ./aura-frontend/app/page.tsx [Client Component SSR]
+    ./aura-frontend/app/page.tsx [Server Component]
+
+
+
+./aura-frontend/app/page.tsx:6:1
+Export auth doesn't exist in target module
+  4 | import useAuth from './useAuth'; // Our new auth detector
+  5 | import LoginScreen from './LoginScreen'; // Our new login page
+> 6 | import { auth, db } from './firebaseConfig'; // We need 'db' for Step 3
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { User } from 'firebase/auth'; // Type for the user object
+  8 | // --- END NEW IMPORTS ---
+  9 |
+
+The export auth was not found in module [project]/aura-frontend/app/firebaseConfig.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./aura-frontend/app/page.tsx [Client Component Browser]
+    ./aura-frontend/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./aura-frontend/app/page.tsx [Client Component SSR]
+    ./aura-frontend/app/page.tsx [Server Component]
+
+
+
+./aura-frontend/app/page.tsx:6:1
+Export auth doesn't exist in target module
+  4 | import useAuth from './useAuth'; // Our new auth detector
+  5 | import LoginScreen from './LoginScreen'; // Our new login page
+> 6 | import { auth, db } from './firebaseConfig'; // We need 'db' for Step 3
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { User } from 'firebase/auth'; // Type for the user object
+  8 | // --- END NEW IMPORTS ---
+  9 |
+
+The export auth was not found in module [project]/aura-frontend/app/firebaseConfig.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./aura-frontend/app/page.tsx [Client Component Browser]
+    ./aura-frontend/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./aura-frontend/app/page.tsx [Client Component SSR]
+    ./aura-frontend/app/page.tsx [Server Component]
+
+
+
+./aura-frontend/app/useAuth.tsx:4:1
+Export auth doesn't exist in target module
+  2 |
+  3 | import { useState, useEffect } from 'react';
+> 4 | import { auth } from './firebaseConfig'; // Imports 'auth' from Step 1
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { onAuthStateChanged, User } from 'firebase/auth';
+  6 |
+  7 | /**
+
+The export auth was not found in module [project]/aura-frontend/app/firebaseConfig.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./aura-frontend/app/useAuth.tsx [Client Component Browser]
+    ./aura-frontend/app/page.tsx [Client Component Browser]
+    ./aura-frontend/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./aura-frontend/app/useAuth.tsx [Client Component SSR]
+    ./aura-frontend/app/page.tsx [Client Component SSR]
+    ./aura-frontend/app/page.tsx [Server Component]
+
+
+
+./aura-frontend/app/useAuth.tsx:4:1
+Export auth doesn't exist in target module
+  2 |
+  3 | import { useState, useEffect } from 'react';
+> 4 | import { auth } from './firebaseConfig'; // Imports 'auth' from Step 1
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { onAuthStateChanged, User } from 'firebase/auth';
+  6 |
+  7 | /**
+
+The export auth was not found in module [project]/aura-frontend/app/firebaseConfig.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./aura-frontend/app/useAuth.tsx [Client Component Browser]
+    ./aura-frontend/app/page.tsx [Client Component Browser]
+    ./aura-frontend/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./aura-frontend/app/useAuth.tsx [Client Component SSR]
+    ./aura-frontend/app/page.tsx [Client Component SSR]
+    ./aura-frontend/app/page.tsx [Server Component]
+
+
+[00:00:11.517] Browser ERROR   uncaughtError: Error: ./aura-frontend/app/LoginScreen.tsx:3:1
+Export auth doesn't exist in target module
+  1 | 'use client';
+  2 |
+> 3 | import { auth } from './firebaseConfig';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { GoogleAuthProvider, signInWithPopup, signInAnonymously } from 'firebase/auth';
+  5 | import { Sparkles } from 'lucide-react';
+  6 |
+
+The export auth was not found in module [project]/aura-frontend/app/firebaseConfig.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./aura-frontend/app/LoginScreen.tsx [Client Component Browser]
+    ./aura-frontend/app/page.tsx [Client Component Browser]
+    ./aura-frontend/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./aura-frontend/app/LoginScreen.tsx [Client Component SSR]
+    ./aura-frontend/app/page.tsx [Client Component SSR]
+    ./aura-frontend/app/page.tsx [Server Component]
+
+
+[00:00:11.734] Browser ERROR   ./aura-frontend/app/LoginScreen.tsx:3:1
+Export auth doesn't exist in target module
+  1 | 'use client';
+  2 |
+> 3 | import { auth } from './firebaseConfig';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { GoogleAuthProvider, signInWithPopup, signInAnonymously } from 'firebase/auth';
+  5 | import { Sparkles } from 'lucide-react';
+  6 |
+
+The export auth was not found in module [project]/aura-frontend/app/firebaseConfig.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./aura-frontend/app/LoginScreen.tsx [Client Component Browser]
+    ./aura-frontend/app/page.tsx [Client Component Browser]
+    ./aura-frontend/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./aura-frontend/app/LoginScreen.tsx [Client Component SSR]
+    ./aura-frontend/app/page.tsx [Client Component SSR]
+    ./aura-frontend/app/page.tsx [Server Component]
+[00:00:11.734] Browser ERROR   ./aura-frontend/app/LoginScreen.tsx:3:1
+Export auth doesn't exist in target module
+  1 | 'use client';
+  2 |
+> 3 | import { auth } from './firebaseConfig';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { GoogleAuthProvider, signInWithPopup, signInAnonymously } from 'firebase/auth';
+  5 | import { Sparkles } from 'lucide-react';
+  6 |
+
+The export auth was not found in module [project]/aura-frontend/app/firebaseConfig.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./aura-frontend/app/LoginScreen.tsx [Client Component Browser]
+    ./aura-frontend/app/page.tsx [Client Component Browser]
+    ./aura-frontend/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./aura-frontend/app/LoginScreen.tsx [Client Component SSR]
+    ./aura-frontend/app/page.tsx [Client Component SSR]
+    ./aura-frontend/app/page.tsx [Server Component]
+[00:00:11.734] Browser ERROR   ./aura-frontend/app/page.tsx:6:1
+Export auth doesn't exist in target module
+  4 | import useAuth from './useAuth'; // Our new auth detector
+  5 | import LoginScreen from './LoginScreen'; // Our new login page
+> 6 | import { auth, db } from './firebaseConfig'; // We need 'db' for Step 3
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { User } from 'firebase/auth'; // Type for the user object
+  8 | // --- END NEW IMPORTS ---
+  9 |
+
+The export auth was not found in module [project]/aura-frontend/app/firebaseConfig.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./aura-frontend/app/page.tsx [Client Component Browser]
+    ./aura-frontend/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./aura-frontend/app/page.tsx [Client Component SSR]
+    ./aura-frontend/app/page.tsx [Server Component]
+[00:00:11.734] Browser ERROR   ./aura-frontend/app/page.tsx:6:1
+Export auth doesn't exist in target module
+  4 | import useAuth from './useAuth'; // Our new auth detector
+  5 | import LoginScreen from './LoginScreen'; // Our new login page
+> 6 | import { auth, db } from './firebaseConfig'; // We need 'db' for Step 3
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { User } from 'firebase/auth'; // Type for the user object
+  8 | // --- END NEW IMPORTS ---
+  9 |
+
+The export auth was not found in module [project]/aura-frontend/app/firebaseConfig.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./aura-frontend/app/page.tsx [Client Component Browser]
+    ./aura-frontend/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./aura-frontend/app/page.tsx [Client Component SSR]
+    ./aura-frontend/app/page.tsx [Server Component]
+[00:00:11.734] Browser ERROR   ./aura-frontend/app/useAuth.tsx:4:1
+Export auth doesn't exist in target module
+  2 |
+  3 | import { useState, useEffect } from 'react';
+> 4 | import { auth } from './firebaseConfig'; // Imports 'auth' from Step 1
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { onAuthStateChanged, User } from 'firebase/auth';
+  6 |
+  7 | /**
+
+The export auth was not found in module [project]/aura-frontend/app/firebaseConfig.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./aura-frontend/app/useAuth.tsx [Client Component Browser]
+    ./aura-frontend/app/page.tsx [Client Component Browser]
+    ./aura-frontend/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./aura-frontend/app/useAuth.tsx [Client Component SSR]
+    ./aura-frontend/app/page.tsx [Client Component SSR]
+    ./aura-frontend/app/page.tsx [Server Component]
+[00:00:11.734] Browser ERROR   ./aura-frontend/app/useAuth.tsx:4:1
+Export auth doesn't exist in target module
+  2 |
+  3 | import { useState, useEffect } from 'react';
+> 4 | import { auth } from './firebaseConfig'; // Imports 'auth' from Step 1
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { onAuthStateChanged, User } from 'firebase/auth';
+  6 |
+  7 | /**
+
+The export auth was not found in module [project]/aura-frontend/app/firebaseConfig.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./aura-frontend/app/useAuth.tsx [Client Component Browser]
+    ./aura-frontend/app/page.tsx [Client Component Browser]
+    ./aura-frontend/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./aura-frontend/app/useAuth.tsx [Client Component SSR]
+    ./aura-frontend/app/page.tsx [Client Component SSR]
+    ./aura-frontend/app/page.tsx [Server Component]
+[00:00:12.278] Browser ERROR   ./aura-frontend/app/LoginScreen.tsx:3:1
+Export auth doesn't exist in target module
+  1 | 'use client';
+  2 |
+> 3 | import { auth } from './firebaseConfig';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { GoogleAuthProvider, signInWithPopup, signInAnonymously } from 'firebase/auth';
+  5 | import { Sparkles } from 'lucide-react';
+  6 |
+
+The export auth was not found in module [project]/aura-frontend/app/firebaseConfig.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./aura-frontend/app/LoginScreen.tsx [Client Component Browser]
+    ./aura-frontend/app/page.tsx [Client Component Browser]
+    ./aura-frontend/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./aura-frontend/app/LoginScreen.tsx [Client Component SSR]
+    ./aura-frontend/app/page.tsx [Client Component SSR]
+    ./aura-frontend/app/page.tsx [Server Component]
+[00:00:12.278] Browser ERROR   ./aura-frontend/app/LoginScreen.tsx:3:1
+Export auth doesn't exist in target module
+  1 | 'use client';
+  2 |
+> 3 | import { auth } from './firebaseConfig';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { GoogleAuthProvider, signInWithPopup, signInAnonymously } from 'firebase/auth';
+  5 | import { Sparkles } from 'lucide-react';
+  6 |
+
+The export auth was not found in module [project]/aura-frontend/app/firebaseConfig.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./aura-frontend/app/LoginScreen.tsx [Client Component Browser]
+    ./aura-frontend/app/page.tsx [Client Component Browser]
+    ./aura-frontend/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./aura-frontend/app/LoginScreen.tsx [Client Component SSR]
+    ./aura-frontend/app/page.tsx [Client Component SSR]
+    ./aura-frontend/app/page.tsx [Server Component]
+[00:00:12.278] Browser ERROR   ./aura-frontend/app/page.tsx:6:1
+Export auth doesn't exist in target module
+  4 | import useAuth from './useAuth'; // Our new auth detector
+  5 | import LoginScreen from './LoginScreen'; // Our new login page
+> 6 | import { auth, db } from './firebaseConfig'; // We need 'db' for Step 3
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { User } from 'firebase/auth'; // Type for the user object
+  8 | // --- END NEW IMPORTS ---
+  9 |
+
+The export auth was not found in module [project]/aura-frontend/app/firebaseConfig.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./aura-frontend/app/page.tsx [Client Component Browser]
+    ./aura-frontend/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./aura-frontend/app/page.tsx [Client Component SSR]
+    ./aura-frontend/app/page.tsx [Server Component]
+[00:00:12.278] Browser ERROR   ./aura-frontend/app/page.tsx:6:1
+Export auth doesn't exist in target module
+  4 | import useAuth from './useAuth'; // Our new auth detector
+  5 | import LoginScreen from './LoginScreen'; // Our new login page
+> 6 | import { auth, db } from './firebaseConfig'; // We need 'db' for Step 3
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import { User } from 'firebase/auth'; // Type for the user object
+  8 | // --- END NEW IMPORTS ---
+  9 |
+
+The export auth was not found in module [project]/aura-frontend/app/firebaseConfig.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./aura-frontend/app/page.tsx [Client Component Browser]
+    ./aura-frontend/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./aura-frontend/app/page.tsx [Client Component SSR]
+    ./aura-frontend/app/page.tsx [Server Component]
+[00:00:12.278] Browser ERROR   ./aura-frontend/app/useAuth.tsx:4:1
+Export auth doesn't exist in target module
+  2 |
+  3 | import { useState, useEffect } from 'react';
+> 4 | import { auth } from './firebaseConfig'; // Imports 'auth' from Step 1
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { onAuthStateChanged, User } from 'firebase/auth';
+  6 |
+  7 | /**
+
+The export auth was not found in module [project]/aura-frontend/app/firebaseConfig.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./aura-frontend/app/useAuth.tsx [Client Component Browser]
+    ./aura-frontend/app/page.tsx [Client Component Browser]
+    ./aura-frontend/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./aura-frontend/app/useAuth.tsx [Client Component SSR]
+    ./aura-frontend/app/page.tsx [Client Component SSR]
+    ./aura-frontend/app/page.tsx [Server Component]
+[00:00:12.278] Browser ERROR   ./aura-frontend/app/useAuth.tsx:4:1
+Export auth doesn't exist in target module
+  2 |
+  3 | import { useState, useEffect } from 'react';
+> 4 | import { auth } from './firebaseConfig'; // Imports 'auth' from Step 1
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { onAuthStateChanged, User } from 'firebase/auth';
+  6 |
+  7 | /**
+
+The export auth was not found in module [project]/aura-frontend/app/firebaseConfig.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./aura-frontend/app/useAuth.tsx [Client Component Browser]
+    ./aura-frontend/app/page.tsx [Client Component Browser]
+    ./aura-frontend/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./aura-frontend/app/useAuth.tsx [Client Component SSR]
+    ./aura-frontend/app/page.tsx [Client Component SSR]
+    ./aura-frontend/app/page.tsx [Server Component]
+[00:05:04.195] Server  LOG      ✓ Compiled in 848ms
+[00:05:06.023] Server  WARN    [2025-10-23T17:16:56.988Z]  @firebase/analytics: "Analytics: Firebase Analytics is not supported in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: (1) Cookies are not available. (analytics/invalid-analytics-context)."
+[00:05:06.773] Server  ERROR    ⨯ ReferenceError: window is not defined
+[00:05:07.259] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:32.023] Browser ERROR   Error during guest login: {"code":"auth/admin-restricted-operation","customData":{},"name":"FirebaseError"}
+[00:05:37.102] Browser ERROR   Error during Google login: {"code":"auth/operation-not-allowed","customData":{},"name":"FirebaseError"}
+[00:06:17.341] Browser ERROR   uncaughtError: ReferenceError: ALL_ACTIVITIES is not defined
+[00:09:06.964] Server  LOG      ✓ Compiled in 138ms
+[00:09:06.973] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:09:07.996] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:09:14.944] Browser ERROR   uncaughtError: ReferenceError: ALL_ACTIVITIES is not defined
+[00:11:00.110] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:11:00.668] Server  LOG      ✓ Compiled in 282ms
+[00:11:00.940] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:11:35.056] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:11:44.417] Browser ERROR   Error during guest login: {"code":"auth/admin-restricted-operation","customData":{},"name":"FirebaseError"}
+[00:15:55.948] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:15:58.841] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:16:06.259] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:17:28.381] Server  LOG      ✓ Compiled in 137ms
+[00:17:28.707] Browser ERROR   The final argument passed to %s changed size between renders. The order and size of this array must remain constant.
+
+Previous: %s
+Incoming: %s useEffect [] [[object Object],[object Object]]
+[00:17:36.010] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:27:04.327] Server  LOG      ✓ Compiled in 127ms
+[00:27:16.284] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:27:19.472] Browser LOG     [MoodChart] Received history prop: [{"activities":["Hobby"],"date":{"nanoseconds":779000000,"seconds":1761240608,"type":"firestore/timestamp/1.0"},"id":"QUr1w869u7FyHS3X6Gv8","labels":["Sadness","Family"],"originalText":"i m sad","original_text":"i m sad","sentiment":"NEGATIVE"},{"activities":["Social"],"date":{"nanoseconds":851000000,"seconds":1761240593,"type":"firestore/timestamp/1.0"},"id":"56yN6lAKylIyUd2vQJ9f","labels":["Joy","Optimism","Family","Health","Relationships"],"originalText":"i m very happy todayyy","original_text":"i m very happy todayyy","sentiment":"POSITIVE"},{"activities":[],"date":{"nanoseconds":460000000,"seconds":1761240429,"type":"firestore/timestamp/1.0"},"id":"GEiUvS82RjJHKFLj65xS","labels":["Sadness","Work"],"originalText":"i m sad as i didn't do assignment ","original_text":"i m sad as i didn't do assignment ","sentiment":"NEGATIVE"},{"activities":[],"date":{"nanoseconds":287000000,"seconds":1761240267,"type":"firestore/timestamp/1.0"},"id":"Ml4Cb4wWK00TNuYcCxdu","labels":["Joy","Optimism"],"originalText":"i am very happy . I ate fired rice\n","original_text":"i am very happy . I ate fired rice\n","sentiment":"POSITIVE"}]
+[00:27:19.472] Browser LOG     [MoodChart] Filtering for entries after: 2025-10-16T17:39:10.342Z
+[00:27:19.472] Browser LOG     [MoodChart] Filtered recent entries: []
+[00:27:19.472] Browser LOG     [MoodChart] Not enough entries to draw chart. Found: 0
+[00:27:19.472] Browser LOG     [MoodChart] Received history prop: [{"activities":["Hobby"],"date":{"nanoseconds":779000000,"seconds":1761240608,"type":"firestore/timestamp/1.0"},"id":"QUr1w869u7FyHS3X6Gv8","labels":["Sadness","Family"],"originalText":"i m sad","original_text":"i m sad","sentiment":"NEGATIVE"},{"activities":["Social"],"date":{"nanoseconds":851000000,"seconds":1761240593,"type":"firestore/timestamp/1.0"},"id":"56yN6lAKylIyUd2vQJ9f","labels":["Joy","Optimism","Family","Health","Relationships"],"originalText":"i m very happy todayyy","original_text":"i m very happy todayyy","sentiment":"POSITIVE"},{"activities":[],"date":{"nanoseconds":460000000,"seconds":1761240429,"type":"firestore/timestamp/1.0"},"id":"GEiUvS82RjJHKFLj65xS","labels":["Sadness","Work"],"originalText":"i m sad as i didn't do assignment ","original_text":"i m sad as i didn't do assignment ","sentiment":"NEGATIVE"},{"activities":[],"date":{"nanoseconds":287000000,"seconds":1761240267,"type":"firestore/timestamp/1.0"},"id":"Ml4Cb4wWK00TNuYcCxdu","labels":["Joy","Optimism"],"originalText":"i am very happy . I ate fired rice\n","original_text":"i am very happy . I ate fired rice\n","sentiment":"POSITIVE"}]
+[00:27:19.472] Browser LOG     [MoodChart] Filtering for entries after: 2025-10-16T17:39:10.342Z
+[00:27:19.472] Browser LOG     [MoodChart] Filtered recent entries: []
+[00:27:19.472] Browser LOG     [MoodChart] Not enough entries to draw chart. Found: 0
+[00:27:25.151] Browser LOG     [MoodChart] Received history prop: [{"activities":["Hobby"],"date":{"nanoseconds":779000000,"seconds":1761240608,"type":"firestore/timestamp/1.0"},"id":"QUr1w869u7FyHS3X6Gv8","labels":["Sadness","Family"],"originalText":"i m sad","original_text":"i m sad","sentiment":"NEGATIVE"},{"activities":["Social"],"date":{"nanoseconds":851000000,"seconds":1761240593,"type":"firestore/timestamp/1.0"},"id":"56yN6lAKylIyUd2vQJ9f","labels":["Joy","Optimism","Family","Health","Relationships"],"originalText":"i m very happy todayyy","original_text":"i m very happy todayyy","sentiment":"POSITIVE"},{"activities":[],"date":{"nanoseconds":460000000,"seconds":1761240429,"type":"firestore/timestamp/1.0"},"id":"GEiUvS82RjJHKFLj65xS","labels":["Sadness","Work"],"originalText":"i m sad as i didn't do assignment ","original_text":"i m sad as i didn't do assignment ","sentiment":"NEGATIVE"},{"activities":[],"date":{"nanoseconds":287000000,"seconds":1761240267,"type":"firestore/timestamp/1.0"},"id":"Ml4Cb4wWK00TNuYcCxdu","labels":["Joy","Optimism"],"originalText":"i am very happy . I ate fired rice\n","original_text":"i am very happy . I ate fired rice\n","sentiment":"POSITIVE"}]
+[00:27:25.151] Browser LOG     [MoodChart] Filtering for entries after: 2025-10-16T17:39:16.015Z
+[00:27:25.151] Browser LOG     [MoodChart] Filtered recent entries: []
+[00:27:25.151] Browser LOG     [MoodChart] Not enough entries to draw chart. Found: 0
+[00:27:25.151] Browser LOG     [MoodChart] Received history prop: [{"activities":["Hobby"],"date":{"nanoseconds":779000000,"seconds":1761240608,"type":"firestore/timestamp/1.0"},"id":"QUr1w869u7FyHS3X6Gv8","labels":["Sadness","Family"],"originalText":"i m sad","original_text":"i m sad","sentiment":"NEGATIVE"},{"activities":["Social"],"date":{"nanoseconds":851000000,"seconds":1761240593,"type":"firestore/timestamp/1.0"},"id":"56yN6lAKylIyUd2vQJ9f","labels":["Joy","Optimism","Family","Health","Relationships"],"originalText":"i m very happy todayyy","original_text":"i m very happy todayyy","sentiment":"POSITIVE"},{"activities":[],"date":{"nanoseconds":460000000,"seconds":1761240429,"type":"firestore/timestamp/1.0"},"id":"GEiUvS82RjJHKFLj65xS","labels":["Sadness","Work"],"originalText":"i m sad as i didn't do assignment ","original_text":"i m sad as i didn't do assignment ","sentiment":"NEGATIVE"},{"activities":[],"date":{"nanoseconds":287000000,"seconds":1761240267,"type":"firestore/timestamp/1.0"},"id":"Ml4Cb4wWK00TNuYcCxdu","labels":["Joy","Optimism"],"originalText":"i am very happy . I ate fired rice\n","original_text":"i am very happy . I ate fired rice\n","sentiment":"POSITIVE"}]
+[00:27:25.151] Browser LOG     [MoodChart] Filtering for entries after: 2025-10-16T17:39:16.015Z
+[00:27:25.151] Browser LOG     [MoodChart] Filtered recent entries: []
+[00:27:25.151] Browser LOG     [MoodChart] Not enough entries to draw chart. Found: 0
+[00:28:34.254] Browser LOG     [MoodChart] Received history prop: [{"activities":[],"date":{"nanoseconds":466000000,"seconds":1761241222,"type":"firestore/timestamp/1.0"},"id":"MTEXk11CwhGuCZXTSRV2","labels":["Joy","Optimism","Family","Health"],"originalText":"i m happy","original_text":"i m happy","sentiment":"POSITIVE"},{"activities":["Hobby"],"date":{"nanoseconds":779000000,"seconds":1761240608,"type":"firestore/timestamp/1.0"},"id":"QUr1w869u7FyHS3X6Gv8","labels":["Sadness","Family"],"originalText":"i m sad","original_text":"i m sad","sentiment":"NEGATIVE"},{"activities":["Social"],"date":{"nanoseconds":851000000,"seconds":1761240593,"type":"firestore/timestamp/1.0"},"id":"56yN6lAKylIyUd2vQJ9f","labels":["Joy","Optimism","Family","Health","Relationships"],"originalText":"i m very happy todayyy","original_text":"i m very happy todayyy","sentiment":"POSITIVE"},{"activities":[],"date":{"nanoseconds":460000000,"seconds":1761240429,"type":"firestore/timestamp/1.0"},"id":"GEiUvS82RjJHKFLj65xS","labels":["Sadness","Work"],"originalText":"i m sad as i didn't do assignment ","original_text":"i m sad as i didn't do assignment ","sentiment":"NEGATIVE"},{"activities":[],"date":{"nanoseconds":287000000,"seconds":1761240267,"type":"firestore/timestamp/1.0"},"id":"Ml4Cb4wWK00TNuYcCxdu","labels":["Joy","Optimism"],"originalText":"i am very happy . I ate fired rice\n","original_text":"i am very happy . I ate fired rice\n","sentiment":"POSITIVE"}]
+[00:28:34.255] Browser LOG     [MoodChart] Filtering for entries after: 2025-10-16T17:40:25.123Z
+[00:28:34.255] Browser LOG     [MoodChart] Filtered recent entries: []
+[00:28:34.255] Browser LOG     [MoodChart] Not enough entries to draw chart. Found: 0
+[00:28:34.255] Browser LOG     [MoodChart] Received history prop: [{"activities":[],"date":{"nanoseconds":466000000,"seconds":1761241222,"type":"firestore/timestamp/1.0"},"id":"MTEXk11CwhGuCZXTSRV2","labels":["Joy","Optimism","Family","Health"],"originalText":"i m happy","original_text":"i m happy","sentiment":"POSITIVE"},{"activities":["Hobby"],"date":{"nanoseconds":779000000,"seconds":1761240608,"type":"firestore/timestamp/1.0"},"id":"QUr1w869u7FyHS3X6Gv8","labels":["Sadness","Family"],"originalText":"i m sad","original_text":"i m sad","sentiment":"NEGATIVE"},{"activities":["Social"],"date":{"nanoseconds":851000000,"seconds":1761240593,"type":"firestore/timestamp/1.0"},"id":"56yN6lAKylIyUd2vQJ9f","labels":["Joy","Optimism","Family","Health","Relationships"],"originalText":"i m very happy todayyy","original_text":"i m very happy todayyy","sentiment":"POSITIVE"},{"activities":[],"date":{"nanoseconds":460000000,"seconds":1761240429,"type":"firestore/timestamp/1.0"},"id":"GEiUvS82RjJHKFLj65xS","labels":["Sadness","Work"],"originalText":"i m sad as i didn't do assignment ","original_text":"i m sad as i didn't do assignment ","sentiment":"NEGATIVE"},{"activities":[],"date":{"nanoseconds":287000000,"seconds":1761240267,"type":"firestore/timestamp/1.0"},"id":"Ml4Cb4wWK00TNuYcCxdu","labels":["Joy","Optimism"],"originalText":"i am very happy . I ate fired rice\n","original_text":"i am very happy . I ate fired rice\n","sentiment":"POSITIVE"}]
+[00:28:34.255] Browser LOG     [MoodChart] Filtering for entries after: 2025-10-16T17:40:25.123Z
+[00:28:34.255] Browser LOG     [MoodChart] Filtered recent entries: []
+[00:28:34.255] Browser LOG     [MoodChart] Not enough entries to draw chart. Found: 0
+[00:28:54.536] Browser LOG     [MoodChart] Received history prop: [{"activities":[],"date":{"nanoseconds":359000000,"seconds":1761241238,"type":"firestore/timestamp/1.0"},"id":"h8L704l2Pkt0CiQDfmev","labels":["Sadness","Family"],"originalText":"i m sad","original_text":"i m sad","sentiment":"NEGATIVE"},{"activities":[],"date":{"nanoseconds":466000000,"seconds":1761241222,"type":"firestore/timestamp/1.0"},"id":"MTEXk11CwhGuCZXTSRV2","labels":["Joy","Optimism","Family","Health"],"originalText":"i m happy","original_text":"i m happy","sentiment":"POSITIVE"},{"activities":["Hobby"],"date":{"nanoseconds":779000000,"seconds":1761240608,"type":"firestore/timestamp/1.0"},"id":"QUr1w869u7FyHS3X6Gv8","labels":["Sadness","Family"],"originalText":"i m sad","original_text":"i m sad","sentiment":"NEGATIVE"},{"activities":["Social"],"date":{"nanoseconds":851000000,"seconds":1761240593,"type":"firestore/timestamp/1.0"},"id":"56yN6lAKylIyUd2vQJ9f","labels":["Joy","Optimism","Family","Health","Relationships"],"originalText":"i m very happy todayyy","original_text":"i m very happy todayyy","sentiment":"POSITIVE"},{"activities":[],"date":{"nanoseconds":460000000,"seconds":1761240429,"type":"firestore/timestamp/1.0"},"id":"GEiUvS82RjJHKFLj65xS","labels":["Sadness","Work"],"originalText":"i m sad as i didn't do assignment ","original_text":"i m sad as i didn't do assignment ","sentiment":"NEGATIVE"},{"activities":[],"date":{"nanoseconds":287000000,"seconds":1761240267,"type":"firestore/timestamp/1.0"},"id":"Ml4Cb4wWK00TNuYcCxdu","labels":["Joy","Optimism"],"originalText":"i am very happy . I ate fired rice\n","original_text":"i am very happy . I ate fired rice\n","sentiment":"POSITIVE"}]
+[00:28:54.536] Browser LOG     [MoodChart] Filtering for entries after: 2025-10-16T17:40:45.403Z
+[00:28:54.536] Browser LOG     [MoodChart] Filtered recent entries: []
+[00:28:54.536] Browser LOG     [MoodChart] Not enough entries to draw chart. Found: 0
+[00:28:54.536] Browser LOG     [MoodChart] Received history prop: [{"activities":[],"date":{"nanoseconds":359000000,"seconds":1761241238,"type":"firestore/timestamp/1.0"},"id":"h8L704l2Pkt0CiQDfmev","labels":["Sadness","Family"],"originalText":"i m sad","original_text":"i m sad","sentiment":"NEGATIVE"},{"activities":[],"date":{"nanoseconds":466000000,"seconds":1761241222,"type":"firestore/timestamp/1.0"},"id":"MTEXk11CwhGuCZXTSRV2","labels":["Joy","Optimism","Family","Health"],"originalText":"i m happy","original_text":"i m happy","sentiment":"POSITIVE"},{"activities":["Hobby"],"date":{"nanoseconds":779000000,"seconds":1761240608,"type":"firestore/timestamp/1.0"},"id":"QUr1w869u7FyHS3X6Gv8","labels":["Sadness","Family"],"originalText":"i m sad","original_text":"i m sad","sentiment":"NEGATIVE"},{"activities":["Social"],"date":{"nanoseconds":851000000,"seconds":1761240593,"type":"firestore/timestamp/1.0"},"id":"56yN6lAKylIyUd2vQJ9f","labels":["Joy","Optimism","Family","Health","Relationships"],"originalText":"i m very happy todayyy","original_text":"i m very happy todayyy","sentiment":"POSITIVE"},{"activities":[],"date":{"nanoseconds":460000000,"seconds":1761240429,"type":"firestore/timestamp/1.0"},"id":"GEiUvS82RjJHKFLj65xS","labels":["Sadness","Work"],"originalText":"i m sad as i didn't do assignment ","original_text":"i m sad as i didn't do assignment ","sentiment":"NEGATIVE"},{"activities":[],"date":{"nanoseconds":287000000,"seconds":1761240267,"type":"firestore/timestamp/1.0"},"id":"Ml4Cb4wWK00TNuYcCxdu","labels":["Joy","Optimism"],"originalText":"i am very happy . I ate fired rice\n","original_text":"i am very happy . I ate fired rice\n","sentiment":"POSITIVE"}]
+[00:28:54.536] Browser LOG     [MoodChart] Filtering for entries after: 2025-10-16T17:40:45.404Z
+[00:28:54.536] Browser LOG     [MoodChart] Filtered recent entries: []
+[00:28:54.536] Browser LOG     [MoodChart] Not enough entries to draw chart. Found: 0
+[00:29:28.602] Browser ERROR   {}
+[00:29:31.997] Browser LOG     [MoodChart] Received history prop: [{"activities":[],"date":{"nanoseconds":359000000,"seconds":1761241238,"type":"firestore/timestamp/1.0"},"id":"h8L704l2Pkt0CiQDfmev","labels":["Sadness","Family"],"originalText":"i m sad","original_text":"i m sad","sentiment":"NEGATIVE"},{"activities":[],"date":{"nanoseconds":466000000,"seconds":1761241222,"type":"firestore/timestamp/1.0"},"id":"MTEXk11CwhGuCZXTSRV2","labels":["Joy","Optimism","Family","Health"],"originalText":"i m happy","original_text":"i m happy","sentiment":"POSITIVE"},{"activities":["Hobby"],"date":{"nanoseconds":779000000,"seconds":1761240608,"type":"firestore/timestamp/1.0"},"id":"QUr1w869u7FyHS3X6Gv8","labels":["Sadness","Family"],"originalText":"i m sad","original_text":"i m sad","sentiment":"NEGATIVE"},{"activities":["Social"],"date":{"nanoseconds":851000000,"seconds":1761240593,"type":"firestore/timestamp/1.0"},"id":"56yN6lAKylIyUd2vQJ9f","labels":["Joy","Optimism","Family","Health","Relationships"],"originalText":"i m very happy todayyy","original_text":"i m very happy todayyy","sentiment":"POSITIVE"},{"activities":[],"date":{"nanoseconds":460000000,"seconds":1761240429,"type":"firestore/timestamp/1.0"},"id":"GEiUvS82RjJHKFLj65xS","labels":["Sadness","Work"],"originalText":"i m sad as i didn't do assignment ","original_text":"i m sad as i didn't do assignment ","sentiment":"NEGATIVE"},{"activities":[],"date":{"nanoseconds":287000000,"seconds":1761240267,"type":"firestore/timestamp/1.0"},"id":"Ml4Cb4wWK00TNuYcCxdu","labels":["Joy","Optimism"],"originalText":"i am very happy . I ate fired rice\n","original_text":"i am very happy . I ate fired rice\n","sentiment":"POSITIVE"}]
+[00:29:31.998] Browser LOG     [MoodChart] Filtering for entries after: 2025-10-16T17:41:22.866Z
+[00:29:31.998] Browser LOG     [MoodChart] Filtered recent entries: []
+[00:29:31.998] Browser LOG     [MoodChart] Not enough entries to draw chart. Found: 0
+[00:29:31.998] Browser LOG     [MoodChart] Received history prop: [{"activities":[],"date":{"nanoseconds":359000000,"seconds":1761241238,"type":"firestore/timestamp/1.0"},"id":"h8L704l2Pkt0CiQDfmev","labels":["Sadness","Family"],"originalText":"i m sad","original_text":"i m sad","sentiment":"NEGATIVE"},{"activities":[],"date":{"nanoseconds":466000000,"seconds":1761241222,"type":"firestore/timestamp/1.0"},"id":"MTEXk11CwhGuCZXTSRV2","labels":["Joy","Optimism","Family","Health"],"originalText":"i m happy","original_text":"i m happy","sentiment":"POSITIVE"},{"activities":["Hobby"],"date":{"nanoseconds":779000000,"seconds":1761240608,"type":"firestore/timestamp/1.0"},"id":"QUr1w869u7FyHS3X6Gv8","labels":["Sadness","Family"],"originalText":"i m sad","original_text":"i m sad","sentiment":"NEGATIVE"},{"activities":["Social"],"date":{"nanoseconds":851000000,"seconds":1761240593,"type":"firestore/timestamp/1.0"},"id":"56yN6lAKylIyUd2vQJ9f","labels":["Joy","Optimism","Family","Health","Relationships"],"originalText":"i m very happy todayyy","original_text":"i m very happy todayyy","sentiment":"POSITIVE"},{"activities":[],"date":{"nanoseconds":460000000,"seconds":1761240429,"type":"firestore/timestamp/1.0"},"id":"GEiUvS82RjJHKFLj65xS","labels":["Sadness","Work"],"originalText":"i m sad as i didn't do assignment ","original_text":"i m sad as i didn't do assignment ","sentiment":"NEGATIVE"},{"activities":[],"date":{"nanoseconds":287000000,"seconds":1761240267,"type":"firestore/timestamp/1.0"},"id":"Ml4Cb4wWK00TNuYcCxdu","labels":["Joy","Optimism"],"originalText":"i am very happy . I ate fired rice\n","original_text":"i am very happy . I ate fired rice\n","sentiment":"POSITIVE"}]
+[00:29:31.998] Browser LOG     [MoodChart] Filtering for entries after: 2025-10-16T17:41:22.867Z
+[00:29:31.998] Browser LOG     [MoodChart] Filtered recent entries: []
+[00:29:31.998] Browser LOG     [MoodChart] Not enough entries to draw chart. Found: 0
+[00:29:52.872] Browser LOG     [MoodChart] Received history prop: [{"activities":[],"date":{"nanoseconds":799000000,"seconds":1761241296,"type":"firestore/timestamp/1.0"},"id":"MTDRwiK95zfNzj6RGBOm","labels":["Sadness","Anger"],"originalText":"i m sad\n","original_text":"i m sad\n","sentiment":"NEGATIVE"},{"activities":[],"date":{"nanoseconds":359000000,"seconds":1761241238,"type":"firestore/timestamp/1.0"},"id":"h8L704l2Pkt0CiQDfmev","labels":["Sadness","Family"],"originalText":"i m sad","original_text":"i m sad","sentiment":"NEGATIVE"},{"activities":[],"date":{"nanoseconds":466000000,"seconds":1761241222,"type":"firestore/timestamp/1.0"},"id":"MTEXk11CwhGuCZXTSRV2","labels":["Joy","Optimism","Family","Health"],"originalText":"i m happy","original_text":"i m happy","sentiment":"POSITIVE"},{"activities":["Hobby"],"date":{"nanoseconds":779000000,"seconds":1761240608,"type":"firestore/timestamp/1.0"},"id":"QUr1w869u7FyHS3X6Gv8","labels":["Sadness","Family"],"originalText":"i m sad","original_text":"i m sad","sentiment":"NEGATIVE"},{"activities":["Social"],"date":{"nanoseconds":851000000,"seconds":1761240593,"type":"firestore/timestamp/1.0"},"id":"56yN6lAKylIyUd2vQJ9f","labels":["Joy","Optimism","Family","Health","Relationships"],"originalText":"i m very happy todayyy","original_text":"i m very happy todayyy","sentiment":"POSITIVE"},{"activities":[],"date":{"nanoseconds":460000000,"seconds":1761240429,"type":"firestore/timestamp/1.0"},"id":"GEiUvS82RjJHKFLj65xS","labels":["Sadness","Work"],"originalText":"i m sad as i didn't do assignment ","original_text":"i m sad as i didn't do assignment ","sentiment":"NEGATIVE"},{"activities":[],"date":{"nanoseconds":287000000,"seconds":1761240267,"type":"firestore/timestamp/1.0"},"id":"Ml4Cb4wWK00TNuYcCxdu","labels":["Joy","Optimism"],"originalText":"i am very happy . I ate fired rice\n","original_text":"i am very happy . I ate fired rice\n","sentiment":"POSITIVE"}]
+[00:29:52.873] Browser LOG     [MoodChart] Filtering for entries after: 2025-10-16T17:41:43.739Z
+[00:29:52.873] Browser LOG     [MoodChart] Filtered recent entries: []
+[00:29:52.873] Browser LOG     [MoodChart] Not enough entries to draw chart. Found: 0
+[00:29:52.873] Browser LOG     [MoodChart] Received history prop: [{"activities":[],"date":{"nanoseconds":799000000,"seconds":1761241296,"type":"firestore/timestamp/1.0"},"id":"MTDRwiK95zfNzj6RGBOm","labels":["Sadness","Anger"],"originalText":"i m sad\n","original_text":"i m sad\n","sentiment":"NEGATIVE"},{"activities":[],"date":{"nanoseconds":359000000,"seconds":1761241238,"type":"firestore/timestamp/1.0"},"id":"h8L704l2Pkt0CiQDfmev","labels":["Sadness","Family"],"originalText":"i m sad","original_text":"i m sad","sentiment":"NEGATIVE"},{"activities":[],"date":{"nanoseconds":466000000,"seconds":1761241222,"type":"firestore/timestamp/1.0"},"id":"MTEXk11CwhGuCZXTSRV2","labels":["Joy","Optimism","Family","Health"],"originalText":"i m happy","original_text":"i m happy","sentiment":"POSITIVE"},{"activities":["Hobby"],"date":{"nanoseconds":779000000,"seconds":1761240608,"type":"firestore/timestamp/1.0"},"id":"QUr1w869u7FyHS3X6Gv8","labels":["Sadness","Family"],"originalText":"i m sad","original_text":"i m sad","sentiment":"NEGATIVE"},{"activities":["Social"],"date":{"nanoseconds":851000000,"seconds":1761240593,"type":"firestore/timestamp/1.0"},"id":"56yN6lAKylIyUd2vQJ9f","labels":["Joy","Optimism","Family","Health","Relationships"],"originalText":"i m very happy todayyy","original_text":"i m very happy todayyy","sentiment":"POSITIVE"},{"activities":[],"date":{"nanoseconds":460000000,"seconds":1761240429,"type":"firestore/timestamp/1.0"},"id":"GEiUvS82RjJHKFLj65xS","labels":["Sadness","Work"],"originalText":"i m sad as i didn't do assignment ","original_text":"i m sad as i didn't do assignment ","sentiment":"NEGATIVE"},{"activities":[],"date":{"nanoseconds":287000000,"seconds":1761240267,"type":"firestore/timestamp/1.0"},"id":"Ml4Cb4wWK00TNuYcCxdu","labels":["Joy","Optimism"],"originalText":"i am very happy . I ate fired rice\n","original_text":"i am very happy . I ate fired rice\n","sentiment":"POSITIVE"}]
+[00:29:52.873] Browser LOG     [MoodChart] Filtering for entries after: 2025-10-16T17:41:43.740Z
+[00:29:52.873] Browser LOG     [MoodChart] Filtered recent entries: []
+[00:29:52.873] Browser LOG     [MoodChart] Not enough entries to draw chart. Found: 0
+[00:34:23.601] Server  LOG      ✓ Compiled in 89ms
+[00:34:29.978] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:37:05.421] Server  LOG      ✓ Compiled in 120ms
+[00:37:11.340] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:57:16.286] Server  LOG      ✓ Compiled in 111ms
+[01:00:00.599] Server  LOG      ✓ Compiled in 170ms
+[01:00:01.719] Browser ERROR   ./aura-frontend/app/page.tsx:811:101
+Parsing ecmascript source code failed
+  809 |           <div className="flex justify-center space-x-2 rounded-lg bg-slate-200 p-1.5">
+  810 |             <TabButton icon={<BookOpen size={18} />} label="Journal" isActive={view === 'journal'} onClick={() => setView('journal')} />
+> 811 |             <TabButton icon={<LayoutDashboard size={18} />} label="Dashboard" isActive={view ===DASH'dashboard'} onClick={() => setView('dashboard')} />
+      |                                                                                                     ^^^^^^^^^^^
+  812 |           </div>
+  813 |         </nav>
+  814 |
+
+Expected '</', got 'string literal (dashboard, 'dashboard')'
+
+Import traces:
+  Client Component Browser:
+    ./aura-frontend/app/page.tsx [Client Component Browser]
+    ./aura-frontend/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./aura-frontend/app/page.tsx [Client Component SSR]
+    ./aura-frontend/app/page.tsx [Server Component]
+[01:00:01.719] Browser ERROR   ./aura-frontend/app/page.tsx:811:101
+Parsing ecmascript source code failed
+  809 |           <div className="flex justify-center space-x-2 rounded-lg bg-slate-200 p-1.5">
+  810 |             <TabButton icon={<BookOpen size={18} />} label="Journal" isActive={view === 'journal'} onClick={() => setView('journal')} />
+> 811 |             <TabButton icon={<LayoutDashboard size={18} />} label="Dashboard" isActive={view ===DASH'dashboard'} onClick={() => setView('dashboard')} />
+      |                                                                                                     ^^^^^^^^^^^
+  812 |           </div>
+  813 |         </nav>
+  814 |
+
+Expected '</', got 'string literal (dashboard, 'dashboard')'
+
+Import traces:
+  Client Component Browser:
+    ./aura-frontend/app/page.tsx [Client Component Browser]
+    ./aura-frontend/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./aura-frontend/app/page.tsx [Client Component SSR]
+    ./aura-frontend/app/page.tsx [Server Component]
+[01:00:01.719] Browser ERROR   ./aura-frontend/app/page.tsx:811:101
+Parsing ecmascript source code failed
+  809 |           <div className="flex justify-center space-x-2 rounded-lg bg-slate-200 p-1.5">
+  810 |             <TabButton icon={<BookOpen size={18} />} label="Journal" isActive={view === 'journal'} onClick={() => setView('journal')} />
+> 811 |             <TabButton icon={<LayoutDashboard size={18} />} label="Dashboard" isActive={view ===DASH'dashboard'} onClick={() => setView('dashboard')} />
+      |                                                                                                     ^^^^^^^^^^^
+  812 |           </div>
+  813 |         </nav>
+  814 |
+
+Expected '</', got 'string literal (dashboard, 'dashboard')'
+
+Import traces:
+  Client Component Browser:
+    ./aura-frontend/app/page.tsx [Client Component Browser]
+    ./aura-frontend/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./aura-frontend/app/page.tsx [Client Component SSR]
+    ./aura-frontend/app/page.tsx [Server Component]
+[01:00:01.719] Browser ERROR   ./aura-frontend/app/page.tsx:811:101
+Parsing ecmascript source code failed
+  809 |           <div className="flex justify-center space-x-2 rounded-lg bg-slate-200 p-1.5">
+  810 |             <TabButton icon={<BookOpen size={18} />} label="Journal" isActive={view === 'journal'} onClick={() => setView('journal')} />
+> 811 |             <TabButton icon={<LayoutDashboard size={18} />} label="Dashboard" isActive={view ===DASH'dashboard'} onClick={() => setView('dashboard')} />
+      |                                                                                                     ^^^^^^^^^^^
+  812 |           </div>
+  813 |         </nav>
+  814 |
+
+Expected '</', got 'string literal (dashboard, 'dashboard')'
+
+Import traces:
+  Client Component Browser:
+    ./aura-frontend/app/page.tsx [Client Component Browser]
+    ./aura-frontend/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./aura-frontend/app/page.tsx [Client Component SSR]
+    ./aura-frontend/app/page.tsx [Server Component]
+[01:00:01.719] Browser ERROR   ./aura-frontend/app/page.tsx:811:101
+Parsing ecmascript source code failed
+  809 |           <div className="flex justify-center space-x-2 rounded-lg bg-slate-200 p-1.5">
+  810 |             <TabButton icon={<BookOpen size={18} />} label="Journal" isActive={view === 'journal'} onClick={() => setView('journal')} />
+> 811 |             <TabButton icon={<LayoutDashboard size={18} />} label="Dashboard" isActive={view ===DASH'dashboard'} onClick={() => setView('dashboard')} />
+      |                                                                                                     ^^^^^^^^^^^
+  812 |           </div>
+  813 |         </nav>
+  814 |
+
+Expected '</', got 'string literal (dashboard, 'dashboard')'
+
+Import traces:
+  Client Component Browser:
+    ./aura-frontend/app/page.tsx [Client Component Browser]
+    ./aura-frontend/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./aura-frontend/app/page.tsx [Client Component SSR]
+    ./aura-frontend/app/page.tsx [Server Component]
+[01:00:01.719] Browser ERROR   ./aura-frontend/app/page.tsx:811:101
+Parsing ecmascript source code failed
+  809 |           <div className="flex justify-center space-x-2 rounded-lg bg-slate-200 p-1.5">
+  810 |             <TabButton icon={<BookOpen size={18} />} label="Journal" isActive={view === 'journal'} onClick={() => setView('journal')} />
+> 811 |             <TabButton icon={<LayoutDashboard size={18} />} label="Dashboard" isActive={view ===DASH'dashboard'} onClick={() => setView('dashboard')} />
+      |                                                                                                     ^^^^^^^^^^^
+  812 |           </div>
+  813 |         </nav>
+  814 |
+
+Expected '</', got 'string literal (dashboard, 'dashboard')'
+
+Import traces:
+  Client Component Browser:
+    ./aura-frontend/app/page.tsx [Client Component Browser]
+    ./aura-frontend/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./aura-frontend/app/page.tsx [Client Component SSR]
+    ./aura-frontend/app/page.tsx [Server Component]
+[01:00:01.719] Browser ERROR   ./aura-frontend/app/page.tsx:811:101
+Parsing ecmascript source code failed
+  809 |           <div className="flex justify-center space-x-2 rounded-lg bg-slate-200 p-1.5">
+  810 |             <TabButton icon={<BookOpen size={18} />} label="Journal" isActive={view === 'journal'} onClick={() => setView('journal')} />
+> 811 |             <TabButton icon={<LayoutDashboard size={18} />} label="Dashboard" isActive={view ===DASH'dashboard'} onClick={() => setView('dashboard')} />
+      |                                                                                                     ^^^^^^^^^^^
+  812 |           </div>
+  813 |         </nav>
+  814 |
+
+Expected '</', got 'string literal (dashboard, 'dashboard')'
+
+Import traces:
+  Client Component Browser:
+    ./aura-frontend/app/page.tsx [Client Component Browser]
+    ./aura-frontend/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./aura-frontend/app/page.tsx [Client Component SSR]
+    ./aura-frontend/app/page.tsx [Server Component]
+[01:00:01.719] Browser ERROR   ./aura-frontend/app/page.tsx:811:101
+Parsing ecmascript source code failed
+  809 |           <div className="flex justify-center space-x-2 rounded-lg bg-slate-200 p-1.5">
+  810 |             <TabButton icon={<BookOpen size={18} />} label="Journal" isActive={view === 'journal'} onClick={() => setView('journal')} />
+> 811 |             <TabButton icon={<LayoutDashboard size={18} />} label="Dashboard" isActive={view ===DASH'dashboard'} onClick={() => setView('dashboard')} />
+      |                                                                                                     ^^^^^^^^^^^
+  812 |           </div>
+  813 |         </nav>
+  814 |
+
+Expected '</', got 'string literal (dashboard, 'dashboard')'
+
+Import traces:
+  Client Component Browser:
+    ./aura-frontend/app/page.tsx [Client Component Browser]
+    ./aura-frontend/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./aura-frontend/app/page.tsx [Client Component SSR]
+    ./aura-frontend/app/page.tsx [Server Component]
+[01:00:01.719] Browser ERROR   ./aura-frontend/app/page.tsx:811:101
+Parsing ecmascript source code failed
+  809 |           <div className="flex justify-center space-x-2 rounded-lg bg-slate-200 p-1.5">
+  810 |             <TabButton icon={<BookOpen size={18} />} label="Journal" isActive={view === 'journal'} onClick={() => setView('journal')} />
+> 811 |             <TabButton icon={<LayoutDashboard size={18} />} label="Dashboard" isActive={view ===DASH'dashboard'} onClick={() => setView('dashboard')} />
+      |                                                                                                     ^^^^^^^^^^^
+  812 |           </div>
+  813 |         </nav>
+  814 |
+
+Expected '</', got 'string literal (dashboard, 'dashboard')'
+
+Import traces:
+  Client Component Browser:
+    ./aura-frontend/app/page.tsx [Client Component Browser]
+    ./aura-frontend/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./aura-frontend/app/page.tsx [Client Component SSR]
+    ./aura-frontend/app/page.tsx [Server Component]
+[01:00:01.719] Browser ERROR   ./aura-frontend/app/page.tsx:811:101
+Parsing ecmascript source code failed
+  809 |           <div className="flex justify-center space-x-2 rounded-lg bg-slate-200 p-1.5">
+  810 |             <TabButton icon={<BookOpen size={18} />} label="Journal" isActive={view === 'journal'} onClick={() => setView('journal')} />
+> 811 |             <TabButton icon={<LayoutDashboard size={18} />} label="Dashboard" isActive={view ===DASH'dashboard'} onClick={() => setView('dashboard')} />
+      |                                                                                                     ^^^^^^^^^^^
+  812 |           </div>
+  813 |         </nav>
+  814 |
+
+Expected '</', got 'string literal (dashboard, 'dashboard')'
+
+Import traces:
+  Client Component Browser:
+    ./aura-frontend/app/page.tsx [Client Component Browser]
+    ./aura-frontend/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./aura-frontend/app/page.tsx [Client Component SSR]
+    ./aura-frontend/app/page.tsx [Server Component]
+[01:00:01.719] Browser ERROR   ./aura-frontend/app/page.tsx:811:101
+Parsing ecmascript source code failed
+  809 |           <div className="flex justify-center space-x-2 rounded-lg bg-slate-200 p-1.5">
+  810 |             <TabButton icon={<BookOpen size={18} />} label="Journal" isActive={view === 'journal'} onClick={() => setView('journal')} />
+> 811 |             <TabButton icon={<LayoutDashboard size={18} />} label="Dashboard" isActive={view ===DASH'dashboard'} onClick={() => setView('dashboard')} />
+      |                                                                                                     ^^^^^^^^^^^
+  812 |           </div>
+  813 |         </nav>
+  814 |
+
+Expected '</', got 'string literal (dashboard, 'dashboard')'
+
+Import traces:
+  Client Component Browser:
+    ./aura-frontend/app/page.tsx [Client Component Browser]
+    ./aura-frontend/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./aura-frontend/app/page.tsx [Client Component SSR]
+    ./aura-frontend/app/page.tsx [Server Component]
+[01:00:01.719] Browser ERROR   ./aura-frontend/app/page.tsx:811:101
+Parsing ecmascript source code failed
+  809 |           <div className="flex justify-center space-x-2 rounded-lg bg-slate-200 p-1.5">
+  810 |             <TabButton icon={<BookOpen size={18} />} label="Journal" isActive={view === 'journal'} onClick={() => setView('journal')} />
+> 811 |             <TabButton icon={<LayoutDashboard size={18} />} label="Dashboard" isActive={view ===DASH'dashboard'} onClick={() => setView('dashboard')} />
+      |                                                                                                     ^^^^^^^^^^^
+  812 |           </div>
+  813 |         </nav>
+  814 |
+
+Expected '</', got 'string literal (dashboard, 'dashboard')'
+
+Import traces:
+  Client Component Browser:
+    ./aura-frontend/app/page.tsx [Client Component Browser]
+    ./aura-frontend/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./aura-frontend/app/page.tsx [Client Component SSR]
+    ./aura-frontend/app/page.tsx [Server Component]
+[01:02:44.859] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./aura-frontend/app/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[01:02:44.861] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./aura-frontend/app/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[01:02:44.861] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./aura-frontend/app/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[01:02:45.827] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:02:45.989] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:02:46.080] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
