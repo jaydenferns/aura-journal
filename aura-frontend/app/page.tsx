@@ -3,14 +3,14 @@
 // React & Next.js imports
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { BookOpen, LayoutDashboard, LogOut, Loader2, TagIcon, Calendar, Activity, Smile, Frown, Meh, Sparkles, ChevronRight } from 'lucide-react';
+import { BookOpen, LayoutDashboard, LogOut, Loader2, TagIcon, Calendar, Activity, Smile, Frown, Meh, Sparkles, ChevronRight, Users, ExternalLink } from 'lucide-react';
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
 import { Timestamp } from 'firebase/firestore'; // Import the Timestamp type
 
 // Firebase & Auth imports
-import { db, auth } from './firebaseConfig';
-import { doc, getDoc, setDoc, addDoc, collection, onSnapshot, query, orderBy, serverTimestamp } from 'firebase/firestore';
+import { db, auth } from './firebaseConfig'; // Assuming firebaseConfig.ts exists and exports these
+import { doc, getDoc, setDoc, addDoc, collection, onSnapshot, query, orderBy, serverTimestamp, where } from 'firebase/firestore';
 import { GoogleAuthProvider, signInWithPopup, signInAnonymously } from 'firebase/auth';
 import { onAuthStateChanged, User } from 'firebase/auth';
 
@@ -21,10 +21,10 @@ ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, T
 // TYPE DEFINITIONS
 // ==================================================================
 
-// Defines the structure for a single journal entry
+// Defines the structure for a single journal entry from Firestore
 export interface JournalEntry {
   id: string;
-  date: Timestamp;
+  date: Timestamp; // Firestore Timestamp
   sentiment: 'POSITIVE' | 'NEGATIVE' | 'NEUTRAL' | string;
   labels: string[];
   activities: string[];
@@ -48,7 +48,7 @@ export interface Habit {
   emoji: string;
 }
 
-// Defines the main analysis result from the AI
+// Defines the main analysis result from the AI backend
 type AnalysisResult = {
   sentiment: 'POSITIVE' | 'NEGATIVE' | 'NEUTRAL' | string;
   labels: string[];
@@ -61,8 +61,20 @@ type StreakData = {
   lastJournalDate: string | null;
 };
 
-// Defines the two main tabs/views of the app
-type View = 'journal' | 'dashboard';
+// Defines the possible tabs/views of the app
+type View = 'journal' | 'dashboard' | 'support';
+
+// Defines the structure for counselor data from Firestore
+interface Counselor {
+  id: string;
+  name: string;
+  title: string;
+  imageUrl: string;
+  specializations: string[];
+  bio: string;
+  website?: string;
+  isActive: boolean;
+}
 
 // ==================================================================
 // CONSTANTS
@@ -86,61 +98,26 @@ const getISODate = (date: Date): string => {
 // ==================================================================
 
 const strategyLibrary: Strategy[] = [
-  {
-    title: "Feeling Anxious about Work?",
-    text: "Try the 'Urgent-Important Matrix' to organize your tasks. Focusing on what's truly important can reduce feelings of being overwhelmed.",
-    emoji: "📋",
-    requiredTags: ["Anxiety", "Work"],
-  },
-  {
-    title: "Feeling Down about Relationships?",
-    text: "Consider writing a short, positive message to a friend or family member. Expressing gratitude can strengthen bonds and lift your spirits.",
-    emoji: "💌",
-    requiredTags: ["Sadness", "Relationships"],
-  },
-  {
-    title: "Feeling Fatigued?",
-    text: "Your energy seems low. A short, 10-minute walk can boost circulation and mental clarity more effectively than staying seated.",
-    emoji: "🚶‍♀️",
-    requiredTags: ["Fatigue"],
-  },
-  {
-    title: "Feeling Anxious?",
-    text: "When you feel overwhelmed, try the 4-7-8 breathing technique. Inhale for 4s, hold for 7s, and exhale for 8s to calm your nervous system.",
-    emoji: "🌬️",
-    requiredTags: ["Anxiety"],
-  },
-  {
-    title: "Feeling Sad?",
-    text: "It's okay to feel this way. Try writing down three small things you are grateful for today. This practice can gently shift your perspective.",
-    emoji: "❤️",
-    requiredTags: ["Sadness"],
-  },
+  { title: "Anxious about Work?", text: "Try the 'Urgent-Important Matrix' to organize tasks.", emoji: "📋", requiredTags: ["Anxiety", "Work"], },
+  { title: "Down about Relationships?", text: "Write a short, positive message to someone you care about.", emoji: "💌", requiredTags: ["Sadness", "Relationships"], },
+  { title: "Feeling Fatigued?", text: "A short 10-minute walk can boost circulation and mental clarity.", emoji: "🚶‍♀️", requiredTags: ["Fatigue"], },
+  { title: "Feeling Anxious?", text: "Try the 4-7-8 breathing technique: Inhale 4s, Hold 7s, Exhale 8s.", emoji: "🌬️", requiredTags: ["Anxiety"], },
+  { title: "Feeling Sad?", text: "Write down three small things you are grateful for today.", emoji: "❤️", requiredTags: ["Sadness"], },
 ];
 
-export function getPersonalizedStrategy(analysis: AnalysisResult): Strategy {
+function getPersonalizedStrategy(analysis: AnalysisResult): Strategy {
   let bestMatch: Strategy | null = null;
   let highestScore = 0;
   const allUserTags = [...analysis.labels, ...analysis.activities];
-
   for (const strategy of strategyLibrary) {
-    const score = strategy.requiredTags.reduce((acc, tag) => {
-      return allUserTags.includes(tag) ? acc + 1 : acc;
-    }, 0);
+    const score = strategy.requiredTags.reduce((acc, tag) => (allUserTags.includes(tag) ? acc + 1 : acc), 0);
     if (score > highestScore) {
       highestScore = score;
       bestMatch = strategy;
     }
   }
-
-  return bestMatch || {
-    title: "Your Daily Insight ✨",
-    text: "Reflecting on your feelings is a powerful step. Notice the patterns in your thoughts and activities.",
-    emoji: "🧠",
-    requiredTags: [],
-  };
+  return bestMatch || { title: "Your Daily Insight ✨", text: "Reflecting on your feelings is a powerful step.", emoji: "🧠", requiredTags: [], };
 }
-
 
 // ==================================================================
 // HELPER: useAuth Hook
@@ -149,20 +126,16 @@ export function getPersonalizedStrategy(analysis: AnalysisResult): Strategy {
 function useAuth() {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
-
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      setUser(user);
-      setLoading(false);
-    });
-    return () => unsubscribe();
+    // Ensure Firebase auth is initialized before listening
+    const unsubscribe = onAuthStateChanged(auth, (user) => { setUser(user); setLoading(false); });
+    return () => unsubscribe(); // Cleanup listener on component unmount
   }, []);
-
   return { user, loading };
 }
 
 // ==================================================================
-// UI COMPONENTS
+// UI COMPONENTS (Merged into one file)
 // ==================================================================
 
 // ---------------------------------
@@ -171,57 +144,20 @@ function useAuth() {
 function LoginScreen() {
   const [isGuestLoading, setIsGuestLoading] = useState(false);
   const [isGoogleLoading, setIsGoogleLoading] = useState(false);
-
-  const handleGoogleLogin = async () => {
-    setIsGoogleLoading(true);
-    const provider = new GoogleAuthProvider();
-    try {
-      await signInWithPopup(auth, provider);
-    } catch (error) {
-      console.error("Error during Google login:", error);
-      setIsGoogleLoading(false);
-    }
-  };
-
-  const handleGuestLogin = async () => {
-    setIsGuestLoading(true);
-    try {
-      await signInAnonymously(auth);
-    } catch (error) {
-      console.error("Error during guest login:", error);
-      setIsGuestLoading(false);
-    }
-  };
-
+  const handleGoogleLogin = async () => { setIsGoogleLoading(true); const provider = new GoogleAuthProvider(); try { await signInWithPopup(auth, provider); } catch (error) { console.error("Error during Google login:", error); setIsGoogleLoading(false); } };
+  const handleGuestLogin = async () => { setIsGuestLoading(true); try { await signInAnonymously(auth); } catch (error) { console.error("Error during guest login:", error); setIsGuestLoading(false); } };
   return (
     <div className="flex min-h-screen flex-col items-center justify-center p-4 bg-slate-50 font-sans">
       <div className="w-full max-w-md text-center">
-        <header className="mb-10">
-          <h1 className="text-6xl font-bold text-indigo-600">Aura</h1>
-          <p className="text-xl text-slate-600 mt-2">Your private space to reflect and grow.</p>
-        </header>
-        <div className="bg-white p-8 rounded-2xl shadow-lg">
-          <h2 className="text-xl font-semibold text-slate-800 mb-6">Welcome Back</h2>
-          <button
-            onClick={handleGoogleLogin}
-            disabled={isGoogleLoading || isGuestLoading}
-            className="w-full bg-indigo-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 shadow-sm flex items-center justify-center disabled:opacity-50"
-          >
-            {isGoogleLoading ? <Loader2 size={20} className="mr-2 animate-spin" /> : <Sparkles size={20} className="mr-2" />}
-            Sign in with Google
+        <header className="mb-10"><h1 className="text-6xl font-bold text-indigo-600">Aura</h1><p className="text-xl text-slate-600 mt-2">Your private space to reflect and grow.</p></header>
+        <div className="bg-white p-8 rounded-2xl shadow-lg"><h2 className="text-xl font-semibold text-slate-800 mb-6">Welcome Back</h2>
+          <button onClick={handleGoogleLogin} disabled={isGoogleLoading || isGuestLoading} className="w-full bg-indigo-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 shadow-sm flex items-center justify-center disabled:opacity-50">
+            {isGoogleLoading ? <Loader2 size={20} className="mr-2 animate-spin" /> : <Sparkles size={20} className="mr-2" />} Sign in with Google
           </button>
-          <button
-            onClick={handleGuestLogin}
-            disabled={isGoogleLoading || isGuestLoading}
-            className="w-full bg-slate-200 text-slate-700 font-bold py-3 px-4 rounded-lg hover:bg-slate-300 transition-all duration-300 mt-4 disabled:opacity-50"
-          >
-            {isGuestLoading ? <Loader2 size={20} className="mr-2 animate-spin" /> : <ChevronRight size={20} className="mr-2" />}
-            Continue as Guest
+          <button onClick={handleGuestLogin} disabled={isGoogleLoading || isGuestLoading} className="w-full bg-slate-200 text-slate-700 font-bold py-3 px-4 rounded-lg hover:bg-slate-300 transition-all duration-300 mt-4 disabled:opacity-50">
+            {isGuestLoading ? <Loader2 size={20} className="mr-2 animate-spin" /> : <ChevronRight size={20} className="mr-2" />} Continue as Guest
           </button>
-        </div>
-        <p className="text-xs text-slate-500 mt-8">
-          By signing in, you agree to our Terms of Service.
-        </p>
+        </div><p className="text-xs text-slate-500 mt-8">By signing in, you agree to our Terms of Service.</p>
       </div>
     </div>
   );
@@ -231,8 +167,8 @@ function LoginScreen() {
 // StreakTracker Component
 // ---------------------------------
 function StreakTracker({ streak }: { streak: number }) {
-  if (streak === 0) return null; // Don't show the streak if it's 0
-
+  // Only render if streak is positive
+  if (streak === 0) return null;
   return (
     <div key={streak} className="flex items-center gap-2 bg-white px-3 py-2 rounded-full shadow-sm border border-slate-200 animate-pop-in">
       <span className="text-2xl" role="img" aria-label="Streak flame">🔥</span>
@@ -245,11 +181,7 @@ function StreakTracker({ streak }: { streak: number }) {
 // BreathingExercise Component
 // ---------------------------------
 function BreathingExercise({ onClose }: { onClose: () => void }) {
-  const phases = [
-    { name: "Inhale", duration: 4 },
-    { name: "Hold", duration: 7 },
-    { name: "Exhale", duration: 8 },
-  ];
+  const phases = [{ name: "Inhale", duration: 4 }, { name: "Hold", duration: 7 }, { name: "Exhale", duration: 8 }];
   const totalCycles = 4;
   const [cycleIndex, setCycleIndex] = useState(-1);
   const [instruction, setInstruction] = useState("Get Ready");
@@ -264,7 +196,7 @@ function BreathingExercise({ onClose }: { onClose: () => void }) {
       const nextCycleIndex = cycleIndex + 1;
       if (nextCycleIndex >= phases.length * totalCycles) {
         clearInterval(interval);
-        onClose();
+        onClose(); // Close the modal when done
         return;
       }
       const phase = phases[nextCycleIndex % 3];
@@ -272,16 +204,17 @@ function BreathingExercise({ onClose }: { onClose: () => void }) {
       setInstruction(phase.name);
       setCountdown(phase.duration);
     }
+    // Cleanup interval on unmount or when countdown changes
     return () => clearInterval(interval);
-  }, [countdown, cycleIndex, onClose]);
+  }, [countdown, cycleIndex, onClose]); // Add onClose to dependency array
 
   return (
     <div className="fixed inset-0 bg-indigo-900 bg-opacity-95 flex flex-col items-center justify-center z-50 animate-fade-in">
       <button onClick={onClose} className="absolute top-6 right-6 text-white text-3xl font-bold opacity-70 hover:opacity-100">&times;</button>
       <div className="text-center">
         <div
-          className="w-48 h-48 rounded-full border-4 border-white flex items-center justify-center transition-all duration-1000"
-          style={{ transform: cycleIndex % 3 === 0 ? 'scale(1.1)' : 'scale(1)' }} // Inhale = grow
+          className="w-48 h-48 rounded-full border-4 border-white flex items-center justify-center transition-transform duration-1000 ease-in-out" // Added transition-transform
+          style={{ transform: instruction === 'Inhale' ? 'scale(1.1)' : 'scale(1)' }} // Grow on Inhale
         >
           <div>
             <p className="text-white text-3xl font-bold">{instruction}</p>
@@ -297,17 +230,17 @@ function BreathingExercise({ onClose }: { onClose: () => void }) {
 // GoalTracker Component
 // ---------------------------------
 function GoalTracker({ habits, onUpdate, onReset }: { habits: Habit[], onUpdate: (id: string) => void, onReset: () => void }) {
+  // Show loading skeleton if habits haven't loaded
   if (!habits || habits.length === 0) {
-    // Render a placeholder or return null if habits haven't loaded yet
     return (
-        <div className="bg-white p-6 rounded-2xl shadow-lg animate-pulse">
-            <div className="h-6 bg-slate-200 rounded w-3/4 mb-4"></div>
-            <div className="space-y-4">
-                <div className="h-10 bg-slate-200 rounded"></div>
-                <div className="h-10 bg-slate-200 rounded"></div>
-                <div className="h-10 bg-slate-200 rounded"></div>
-            </div>
+      <div className="bg-white p-6 rounded-2xl shadow-lg animate-pulse">
+        <div className="h-6 bg-slate-200 rounded w-3/4 mb-4"></div>
+        <div className="space-y-4">
+          <div className="h-10 bg-slate-200 rounded"></div>
+          <div className="h-10 bg-slate-200 rounded"></div>
+          <div className="h-10 bg-slate-200 rounded"></div>
         </div>
+      </div>
     );
   }
 
@@ -315,7 +248,7 @@ function GoalTracker({ habits, onUpdate, onReset }: { habits: Habit[], onUpdate:
     <div className="bg-white p-6 rounded-2xl shadow-lg">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-2xl font-bold text-slate-800">This Week's Goals</h2>
-        <button onClick={onReset} className="text-sm font-medium text-indigo-600 hover:text-indigo-800">Reset</button>
+        <button onClick={onReset} className="text-sm font-medium text-indigo-600 hover:text-indigo-800">Reset Progress</button>
       </div>
       <div className="space-y-4">
         {habits.map(habit => (
@@ -327,7 +260,7 @@ function GoalTracker({ habits, onUpdate, onReset }: { habits: Habit[], onUpdate:
             <div className="w-full bg-slate-200 rounded-full h-2.5 mt-1.5 overflow-hidden">
               <div
                 className="bg-indigo-600 h-2.5 rounded-full transition-all duration-300"
-                style={{ width: `${(habit.progress / habit.target) * 100}%` }}
+                style={{ width: `${Math.min(100, (habit.progress / habit.target) * 100)}%` }} // Ensure width doesn't exceed 100%
               ></div>
             </div>
             <button
@@ -352,46 +285,45 @@ function MoodChart({ history }: { history: JournalEntry[] }) {
   const [hasEnoughData, setHasEnoughData] = useState(false);
 
   useEffect(() => {
+    // Only run this logic in the browser
     if (typeof window === 'undefined') return;
 
     const sevenDaysAgo = new Date();
     sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+    sevenDaysAgo.setHours(0, 0, 0, 0); // Start of 7 days ago
 
-    const recentEntries = history.filter(entry => {
-      if (entry.date && typeof entry.date.toDate === 'function') {
-        return entry.date.toDate() >= sevenDaysAgo;
-      }
-      return false;
-    });
+    // Filter entries from the last 7 days
+    const recentEntries = history.filter(entry => entry.date?.toDate() >= sevenDaysAgo);
 
     if (recentEntries.length < 2) {
       setHasEnoughData(false);
-      return;
+      return; // Need at least 2 points for a line chart
     }
 
     setHasEnoughData(true);
-    const sortedEntries = recentEntries.sort((a, b) => a.date.toDate().getTime() - b.date.toDate().getTime());
+    // Sort entries chronologically for the chart
+    const sortedEntries = [...recentEntries].sort((a, b) => a.date.toDate().getTime() - b.date.toDate().getTime());
+
+    // Prepare data for Chart.js
     const labels = sortedEntries.map(entry => entry.date.toDate().toLocaleDateString('en-US', { month: 'short', day: 'numeric' }));
-    const dataPoints = sortedEntries.map(entry => {
-      if (entry.sentiment === 'POSITIVE') return 1;
-      if (entry.sentiment === 'NEGATIVE') return -1;
-      return 0;
-    });
+    const dataPoints = sortedEntries.map(entry => entry.sentiment === 'POSITIVE' ? 1 : entry.sentiment === 'NEGATIVE' ? -1 : 0);
 
     setChartData({
       labels,
-      datasets: [
-        {
-          label: 'Mood Trend',
-          data: dataPoints,
-          borderColor: 'rgb(79, 70, 229)',
-          backgroundColor: 'rgba(79, 70, 229, 0.5)',
-          tension: 0.1,
-        },
-      ],
+      datasets: [{
+        label: 'Mood Trend',
+        data: dataPoints,
+        borderColor: 'rgb(79, 70, 229)', // Indigo
+        backgroundColor: 'rgba(79, 70, 229, 0.5)',
+        tension: 0.1, // Smooth curve
+        fill: false, // Don't fill area under line
+        pointRadius: 4,
+        pointBackgroundColor: 'rgb(79, 70, 229)',
+      }],
     });
-  }, [history]);
+  }, [history]); // Re-run effect when history data changes
 
+  // Display message if not enough data
   if (!hasEnoughData) {
     return (
       <div className="bg-white p-6 rounded-2xl shadow-lg">
@@ -403,35 +335,57 @@ function MoodChart({ history }: { history: JournalEntry[] }) {
     );
   }
 
+  // Chart configuration
   const chartOptions = {
     responsive: true,
+    maintainAspectRatio: false, // Allow chart height to be controlled
     plugins: {
       legend: { display: false },
-      title: { display: true, text: 'Your Mood Over the Last 7 Days', font: { size: 16, weight: 'bold' } },
+      title: { display: true, text: 'Your Mood Over the Last 7 Days', font: { size: 16, weight: 'bold' as 'bold' } }, // Type assertion for weight
+      tooltip: {
+        callbacks: {
+          label: function (context: any) {
+            let label = context.dataset.label || '';
+            if (label) { label += ': '; }
+            if (context.parsed.y === 1) label += 'Positive';
+            else if (context.parsed.y === -1) label += 'Negative';
+            else if (context.parsed.y === 0) label += 'Neutral';
+            return label;
+          }
+        }
+      }
     },
     scales: {
       y: {
         ticks: {
-          callback: function(value: any) {
+          callback: function (value: any) {
             if (value === 1) return 'Positive';
             if (value === -1) return 'Negative';
             if (value === 0) return 'Neutral';
-            return null;
-          }
+            return null; // Hide other ticks
+          },
+          stepSize: 1 // Only show ticks at -1, 0, 1
         },
         min: -1.5,
         max: 1.5,
+        grid: { color: '#e2e8f0' } // Lighter grid lines
       },
-      x: { grid: { display: false } }
+      x: {
+        grid: { display: false }, // Hide vertical grid lines
+        ticks: { maxRotation: 0, autoSkipPadding: 10 } // Improve label readability
+      }
     },
   };
 
   return (
     <div className="bg-white p-6 rounded-2xl shadow-lg">
-      <Line options={chartOptions as any} data={chartData} />
+      <div className="h-64"> {/* Set a fixed height for the chart container */}
+        <Line options={chartOptions} data={chartData} />
+      </div>
     </div>
   );
 }
+
 
 // ---------------------------------
 // WeeklySummary Component
@@ -442,91 +396,36 @@ function WeeklySummary({ history }: { history: JournalEntry[] }) {
 
   const calculateSummary = () => {
     if (typeof window === 'undefined') return;
-    const sevenDaysAgo = new Date();
-    sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
-
-    const recentEntries = history.filter(entry => {
-      if (entry.date && typeof entry.date.toDate === 'function') {
-        return entry.date.toDate() > sevenDaysAgo;
-      }
-      return false;
-    });
-
-    if (recentEntries.length === 0) {
-      setSummary({ totalEntries: 0, moods: {}, topEmotion: 'N/A', topActivity: 'N/A' });
-      return;
-    }
-
-    const moodCounts: { [key: string]: number } = { POSITIVE: 0, NEGATIVE: 0, NEUTRAL: 0 };
-    const labelCounts: { [key: string]: number } = {};
-    const activityOnPositiveDays: { [key: string]: number } = {};
-
-    recentEntries.forEach(entry => {
-      if (moodCounts[entry.sentiment] !== undefined) moodCounts[entry.sentiment]++;
-      entry.labels.forEach(label => { labelCounts[label] = (labelCounts[label] || 0) + 1; });
-      if (entry.sentiment === 'POSITIVE') {
-        entry.activities.forEach(activity => {
-          activityOnPositiveDays[activity] = (activityOnPositiveDays[activity] || 0) + 1;
-        });
-      }
-    });
-
-    const getTopItem = (obj: { [key: string]: number }) => {
-      const top = Object.keys(obj).reduce((a, b) => obj[a] > obj[b] ? a : b, '');
-      return top || 'N/A';
-    }
-
-    setSummary({
-      totalEntries: recentEntries.length,
-      moods: moodCounts,
-      topEmotion: getTopItem(labelCounts),
-      topActivity: getTopItem(activityOnPositiveDays),
-    });
+    const sevenDaysAgo = new Date(); sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7); sevenDaysAgo.setHours(0,0,0,0);
+    const recentEntries = history.filter(entry => entry.date?.toDate() > sevenDaysAgo);
+    if (recentEntries.length === 0) { setSummary({ totalEntries: 0, moods: {}, topEmotion: 'N/A', topActivity: 'N/A' }); return; }
+    const moodCounts:{[k:string]:number}={POSITIVE:0,NEGATIVE:0,NEUTRAL:0}; const labelCounts:{[k:string]:number}={}; const activityOnPositiveDays:{[k:string]:number}={};
+    recentEntries.forEach(entry => { if(moodCounts[entry.sentiment]!==undefined) moodCounts[entry.sentiment]++; entry.labels.forEach(l=>{labelCounts[l]=(labelCounts[l]||0)+1;}); if(entry.sentiment === 'POSITIVE') entry.activities.forEach(a=>{activityOnPositiveDays[a]=(activityOnPositiveDays[a]||0)+1;}); });
+    const getTopItem=(obj:{[k:string]:number})=>Object.keys(obj).reduce((a,b)=>obj[a]>obj[b]?a:b, '')||'N/A';
+    setSummary({ totalEntries: recentEntries.length, moods: moodCounts, topEmotion: getTopItem(labelCounts), topActivity: getTopItem(activityOnPositiveDays), });
   };
 
-  const handleShowSummary = () => {
-    calculateSummary(); // Calculate summary when button is clicked
-    setShowModal(true);
-  };
-
-  const MoodStat = ({ mood, count, total }: { mood: string, count: number, total: number }) => {
-    const percentage = total > 0 ? Math.round((count / total) * 100) : 0;
-    const colors: { [key:string]: string } = { POSITIVE: 'bg-green-500', NEGATIVE: 'bg-rose-500', NEUTRAL: 'bg-slate-500' };
-    return (
-      <div>
-        <div className="flex justify-between font-semibold text-sm">
-          <span>{mood.charAt(0).toUpperCase() + mood.slice(1).toLowerCase()}</span>
-          <span>{percentage}%</span>
-        </div>
-        <div className="w-full bg-slate-200 rounded-full h-2.5 mt-1"><div className={`${colors[mood] || 'bg-gray-400'} h-2.5 rounded-full`} style={{ width: `${percentage}%` }}></div></div>
-      </div>
-    );
-  };
+  const handleShowSummary = () => { calculateSummary(); setShowModal(true); };
+  const MoodStat=({m,c,t}:{m:string,c:number,t:number})=>{const p=t>0?Math.round((c/t)*100):0; const cl:{[k:string]:string}={POSITIVE:'bg-green-500',NEGATIVE:'bg-rose-500',NEUTRAL:'bg-slate-500'};return(<div><div className="flex justify-between font-semibold text-sm"><span>{m.charAt(0).toUpperCase()+m.slice(1).toLowerCase()}</span><span>{p}%</span></div><div className="w-full bg-slate-200 rounded-full h-2.5 mt-1"><div className={`${cl[m]||'bg-gray-400'} h-2.5 rounded-full`} style={{width:`${p}%`}}></div></div></div>);};
 
   return (
     <>
       <div className="bg-white p-6 rounded-2xl shadow-lg">
         <h2 className="text-2xl font-bold text-slate-800 mb-4">Your Week</h2>
-        <p className="text-slate-600 mb-4">Get a summary of your emotional trends and insights from the past 7 days.</p>
+        <p className="text-slate-600 mb-4 text-sm">Get a summary of your emotional trends and insights from the past 7 days.</p>
         <button onClick={handleShowSummary} className="w-full bg-indigo-600 text-white font-bold py-3 px-4 rounded-xl hover:bg-indigo-700 transition-all">Generate My Weekly Summary</button>
       </div>
       {showModal && summary && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4 animate-fade-in">
           <div className="bg-white rounded-lg shadow-2xl p-6 w-full max-w-md">
-            <div className="flex justify-between items-center border-b pb-3 mb-4"><h2 className="text-2xl font-bold text-slate-800">Your Week in Review</h2><button onClick={() => setShowModal(false)} className="text-2xl font-bold text-slate-500 hover:text-slate-800">&times;</button></div>
+            <div className="flex justify-between items-center border-b pb-3 mb-4"><h2 className="text-2xl font-bold text-slate-800">Your Week in Review</h2><button onClick={()=>setShowModal(false)} className="text-2xl font-bold text-slate-500 hover:text-slate-800">&times;</button></div>
             {summary.totalEntries > 0 ? (
               <div className="space-y-5">
-                <div>
-                  <h3 className="font-bold text-lg mb-2">Mood Breakdown</h3>
-                  <div className="space-y-3"><MoodStat mood="POSITIVE" count={summary.moods.POSITIVE} total={summary.totalEntries} /><MoodStat mood="NEGATIVE" count={summary.moods.NEGATIVE} total={summary.totalEntries} /><MoodStat mood="NEUTRAL" count={summary.moods.NEUTRAL} total={summary.totalEntries} /></div>
-                </div>
-                <div>
-                  <h3 className="font-bold text-lg">Key Insights</h3>
-                  <div className="mt-2 space-y-2 text-slate-700"><p><strong>Your most common feeling was:</strong> <span className="font-semibold text-indigo-700">{summary.topEmotion}</span></p><p><strong>Activity most linked to positive days:</strong> <span className="font-semibold text-green-700">{summary.topActivity}</span></p></div>
-                </div>
-                <div className="bg-indigo-50 p-3 rounded-lg border border-indigo-200"><p className="text-indigo-800"><strong>Pro-Tip:</strong> To boost your mood next week, try focusing on activities like **{summary.topActivity}**!</p></div>
+                <div><h3 className="font-bold text-lg mb-2">Mood Breakdown</h3><div className="space-y-3"><MoodStat m="POSITIVE" c={summary.moods.POSITIVE} t={summary.totalEntries} /><MoodStat m="NEGATIVE" c={summary.moods.NEGATIVE} t={summary.totalEntries} /><MoodStat m="NEUTRAL" c={summary.moods.NEUTRAL} t={summary.totalEntries} /></div></div>
+                <div><h3 className="font-bold text-lg">Key Insights</h3><div className="mt-2 space-y-2 text-slate-700"><p><strong>Most common feeling:</strong> <span className="font-semibold text-indigo-700">{summary.topEmotion}</span></p><p><strong>Activity linked to positive days:</strong> <span className="font-semibold text-green-700">{summary.topActivity}</span></p></div></div>
+                <div className="bg-indigo-50 p-3 rounded-lg border border-indigo-200"><p className="text-indigo-800 text-sm"><strong>Pro-Tip:</strong> To boost your mood next week, try focusing on activities like **{summary.topActivity}**!</p></div>
               </div>
-            ) : (<p className="text-center text-slate-600 py-8">Not enough data from the past week. Keep journaling to unlock your summary!</p>)}
+            ) : (<p className="text-center text-slate-600 py-8">Not enough data from the past week. Keep journaling!</p>)}
           </div>
         </div>
       )}
@@ -534,199 +433,136 @@ function WeeklySummary({ history }: { history: JournalEntry[] }) {
   );
 }
 
+
 // ---------------------------------
 // JournalHistory Component
 // ---------------------------------
 function JournalHistory({ history }: { history: JournalEntry[] }) {
-  const getSentimentStyle = (sentiment: string) => {
-    switch (sentiment) {
-      case 'POSITIVE': return { icon: <Smile size={18} className="text-green-500" />, cardBorder: 'border-l-4 border-green-500' };
-      case 'NEGATIVE': return { icon: <Frown size={18} className="text-rose-500" />, cardBorder: 'border-l-4 border-rose-500' };
-      default: return { icon: <Meh size={18} className="text-slate-500" />, cardBorder: 'border-l-4 border-slate-500' };
-    }
+  const getSentimentStyle = (s: string) => { switch(s){ case 'POSITIVE':return{i:<Smile size={18} className="text-green-500"/>, b:'border-l-4 border-green-500'}; case 'NEGATIVE':return{i:<Frown size={18} className="text-rose-500"/>, b:'border-l-4 border-rose-500'}; default:return{i:<Meh size={18} className="text-slate-500"/>, b:'border-l-4 border-slate-500'};}};
+  if (!history || history.length === 0) { return ( <div className="bg-white p-6 rounded-2xl shadow-lg"><h2 className="text-2xl font-bold text-slate-800 mb-4">Journal History</h2><div className="text-center p-4 bg-slate-100 rounded-lg"><p className="text-slate-600">Your past journal entries will appear here.</p></div></div> ); }
+  return ( <div className="bg-white p-6 rounded-2xl shadow-lg"><h2 className="text-2xl font-bold text-slate-800 mb-4">Journal History</h2><div className="space-y-4 max-h-96 overflow-y-auto pr-2">{history.map(entry => { const {i:icon, b:cardBorder} = getSentimentStyle(entry.sentiment); const entryDate = entry.date?.toDate(); return ( <div key={entry.id} className={`p-4 rounded-lg bg-slate-50 border ${cardBorder}`}><div className="flex justify-between items-center mb-2"><div className="flex items-center gap-2 text-sm font-semibold text-slate-700"><Calendar size={14}/>{entryDate ? entryDate.toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'}) : 'No date'}</div>{icon}</div><p className="text-slate-700 mb-3 text-sm">{entry.originalText || <i>(No text saved)</i>}</p><div className="flex flex-wrap items-center gap-2">{entry.labels?.length>0 && (<div className="flex items-center gap-1.5"><TagIcon size={14} className="text-slate-500"/>{entry.labels.map(l=><SmallTag key={l} text={l} color="bg-indigo-100 text-indigo-700"/>)}</div>)}{entry.activities?.length>0 && (<div className="flex items-center gap-1.5"><Activity size={14} className="text-slate-500"/>{entry.activities.map(a=><SmallTag key={a} text={a} color="bg-orange-100 text-orange-700"/>)}</div>)}</div></div> ); })}</div></div> );
+}
+
+// ---------------------------------
+// CounselorList Component
+// ---------------------------------
+function CounselorList() {
+  const [counselors, setCounselors] = useState<Counselor[]>([]); const [isLoading, setIsLoading] = useState(true); const [error, setError] = useState<string | null>(null);
+  useEffect(() => { const q = query(collection(db, 'counselors'), where("isActive", "==", true)); const unsub = onSnapshot(q, (snap) => { const list = snap.docs.map(doc => ({ id: doc.id, ...doc.data() } as Counselor)); setCounselors(list); setIsLoading(false); setError(null); }, (err) => { console.error("Err fetch counselors:", err); setError("Could not load counselors."); setIsLoading(false); }); return () => unsub(); }, []);
+  return ( <div className="bg-white p-6 rounded-2xl shadow-lg"><h2 className="text-2xl font-bold text-slate-800 mb-1">Find Support</h2><p className="text-slate-600 mb-4 text-sm">Connect with licensed professionals. This is a directory, not an endorsement.</p> {isLoading && (<div className="flex justify-center py-10"><Loader2 size={32} className="text-indigo-600 animate-spin"/></div>)} {error && (<div className="text-center py-10 px-4 bg-rose-50 border border-rose-200 rounded-lg"><p className="text-rose-700 font-semibold">Error</p><p className="text-rose-600 text-sm mt-1">{error}</p></div>)} {!isLoading && !error && counselors.length === 0 && (<div className="text-center py-10 px-4 bg-slate-50 border border-slate-200 rounded-lg"><p className="text-slate-600">No counselors listed.</p></div>)} {!isLoading && !error && counselors.length > 0 && (<div className="space-y-4">{counselors.map(c => <CounselorCard key={c.id} counselor={c} />)}</div>)} <div className="mt-6 pt-4 border-t border-slate-200 text-center"><h3 className="text-md font-semibold text-rose-700 mb-2">Need Immediate Help?</h3><p className="text-sm text-slate-600">If you are in crisis, please reach out. <a href="https://findahelpline.com/" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline ml-1">Find Crisis Resources</a>.</p></div></div> );
+}
+
+// ---------------------------------
+// CounselorCard Component
+// ---------------------------------
+function CounselorCard({ counselor }: { counselor: Counselor }) {
+  // Fallback image function
+  const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+    e.currentTarget.onerror = null; // Prevent infinite loop
+    e.currentTarget.src = 'https://placehold.co/100x100/E2E8F0/475569?text=Counselor';
   };
 
-  if (!history || history.length === 0) {
-    return (
-      <div className="bg-white p-6 rounded-2xl shadow-lg">
-        <h2 className="text-2xl font-bold text-slate-800 mb-4">Journal History</h2>
-        <div className="text-center p-4 bg-slate-100 rounded-lg"><p className="text-slate-600">Your past journal entries will appear here.</p></div>
-      </div>
-    );
-  }
-
   return (
-    <div className="bg-white p-6 rounded-2xl shadow-lg">
-      <h2 className="text-2xl font-bold text-slate-800 mb-4">Journal History</h2>
-      <div className="space-y-4 max-h-96 overflow-y-auto pr-2">
-        {history.map(entry => {
-          const { icon, cardBorder } = getSentimentStyle(entry.sentiment);
-          const entryDate = entry.date?.toDate();
-          return (
-            <div key={entry.id} className={`p-4 rounded-lg bg-slate-50 border ${cardBorder}`}>
-              <div className="flex justify-between items-center mb-2">
-                <div className="flex items-center gap-2 text-sm font-semibold text-slate-700">
-                  <Calendar size={14} />
-                  {entryDate ? entryDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : 'No date'}
-                </div>
-                {icon}
-              </div>
-              <p className="text-slate-700 mb-3">{entry.originalText || <i>(No text was saved for this entry)</i>}</p>
-              <div className="flex flex-wrap items-center gap-2">
-                {entry.labels && entry.labels.length > 0 && (
-                  <div className="flex items-center gap-2">
-                    <TagIcon size={14} className="text-slate-500" />
-                    {entry.labels.map(label => <SmallTag key={label} text={label} color="bg-indigo-100 text-indigo-700" />)}
-                  </div>
-                )}
-                {entry.activities && entry.activities.length > 0 && (
-                  <div className="flex items-center gap-2">
-                    <Activity size={14} className="text-slate-500" />
-                    {entry.activities.map(activity => <SmallTag key={activity} text={activity} color="bg-orange-100 text-orange-700" />)}
-                  </div>
-                )}
-              </div>
-            </div>
-          );
-        })}
+    <div className="flex flex-col sm:flex-row items-start gap-4 p-4 rounded-lg bg-slate-50 border border-slate-200 hover:shadow-md transition-shadow">
+      <img
+        src={counselor.imageUrl || 'https://placehold.co/100x100/E2E8F0/475569?text=Counselor'}
+        alt={`Photo of ${counselor.name}`}
+        className="w-24 h-24 rounded-full object-cover flex-shrink-0 border-2 border-white shadow-sm mx-auto sm:mx-0"
+        onError={handleImageError}
+      />
+      <div className="flex-1 text-center sm:text-left">
+        <h3 className="text-lg font-bold text-slate-800">{counselor.name}</h3>
+        <p className="text-sm font-medium text-indigo-600 mb-1">{counselor.title}</p>
+        {counselor.specializations?.length > 0 && (
+          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-1.5 mb-2">
+            <TagIcon size={14} className="text-slate-500" />
+            {counselor.specializations.map(s => <SmallTag key={s} text={s} color="bg-indigo-100 text-indigo-700" />)}
+          </div>
+        )}
+        <p className="text-sm text-slate-600 mb-3 line-clamp-3">{counselor.bio}</p>
+        {counselor.website && (
+          <a href={counselor.website} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-sm font-medium text-indigo-600 hover:text-indigo-800 hover:underline">
+            Visit Website <ExternalLink size={14} />
+          </a>
+        )}
       </div>
     </div>
   );
 }
 
+
 // ---------------------------------
 // Generic UI Helper Components
 // ---------------------------------
 function TabButton({ icon, label, isActive, onClick }: { icon: React.ReactNode, label: string, isActive: boolean, onClick: () => void }) {
-  return (
-    <button
-      onClick={onClick}
-      className={`flex-1 flex items-center justify-center gap-2 px-3 py-2 rounded-md text-sm font-bold transition-all ${isActive ? 'bg-white text-indigo-700 shadow-sm' : 'text-slate-600 hover:bg-slate-100/50'}`}
-    >
-      {icon} {label}
-    </button>
-  );
+  return ( <button onClick={onClick} className={`flex-1 flex items-center justify-center gap-2 px-3 py-2 rounded-md text-sm font-bold transition-all ${isActive ? 'bg-white text-indigo-700 shadow-sm' : 'text-slate-600 hover:bg-slate-100/50'}`}>{icon} {label}</button> );
 }
 
 function Tag({ label, type }: { label: string, type: 'sentiment' | 'label' | 'activity' }) {
-  const colors = {
-    sentiment: { POSITIVE: 'bg-green-100 text-green-800', NEGATIVE: 'bg-rose-100 text-rose-800', NEUTRAL: 'bg-slate-100 text-slate-800' },
-    label: { Anxiety: 'bg-purple-100 text-purple-800', Fatigue: 'bg-slate-100 text-slate-800', Sadness: 'bg-blue-100 text-blue-800', Work: 'bg-yellow-100 text-yellow-800', Family: 'bg-pink-100 text-pink-800', default: 'bg-indigo-100 text-indigo-800' },
-    activity: 'bg-orange-100 text-orange-800 border border-orange-200',
-  };
-  let color;
-  if (type === 'sentiment') color = (colors.sentiment as any)[label] || colors.label.default;
-  else if (type === 'label') color = (colors.label as any)[label] || colors.label.default;
-  else color = colors.activity;
-  return <span className={`px-3 py-1 text-sm font-medium rounded-full ${color}`}>{type === 'activity' && '🏃‍♂️ '}{label}</span>;
+  const colors = { sentiment:{POSITIVE:'bg-green-100 text-green-800',NEGATIVE:'bg-rose-100 text-rose-800',NEUTRAL:'bg-slate-100 text-slate-800'}, label:{Anxiety:'bg-purple-100 text-purple-800',Fatigue:'bg-slate-100 text-slate-800',Sadness:'bg-blue-100 text-blue-800',Work:'bg-yellow-100 text-yellow-800',Family:'bg-pink-100 text-pink-800',default:'bg-indigo-100 text-indigo-800'}, activity:'bg-orange-100 text-orange-800 border border-orange-200' };
+  let color; if(type==='sentiment')color=(colors.sentiment as any)[label]||colors.label.default; else if(type==='label')color=(colors.label as any)[label]||colors.label.default; else color=colors.activity;
+  return <span className={`px-3 py-1 text-sm font-medium rounded-full ${color}`}>{type==='activity'&&'🏃‍♂️ '}{label}</span>;
 }
 
 const SmallTag = ({ text, color }: { text: string, color: string }) => (<span className={`px-2 py-0.5 text-xs font-medium rounded-full ${color}`}>{text}</span>);
 
 function InsightCard({ analysis }: { analysis: AnalysisResult }) {
   const strategy = getPersonalizedStrategy(analysis);
-  return (
-    <div className="mt-6 bg-indigo-50 border border-indigo-200 rounded-lg p-4">
-      <h3 className="font-bold text-lg text-indigo-800 flex items-center">{strategy.emoji} {strategy.title}</h3>
-      <p className="text-indigo-700 mt-2">{strategy.text}</p>
-    </div>
-  );
+  return ( <div className="mt-6 bg-indigo-50 border border-indigo-200 rounded-lg p-4"><h3 className="font-bold text-lg text-indigo-800 flex items-center">{strategy.emoji} {strategy.title}</h3><p className="text-indigo-700 mt-2 text-sm">{strategy.text}</p></div> );
 }
 
 function CorrelationCard({ analysis }: { analysis: AnalysisResult }) {
-  if (!analysis.activities || analysis.activities.length === 0) return null;
-  let insightText = null;
-  if (analysis.sentiment === 'POSITIVE' && analysis.activities.includes('Exercise')) insightText = "Great job on exercising! It seems to have a positive impact on your mood.";
-  else if (analysis.sentiment === 'POSITIVE' && analysis.activities.includes('Social')) insightText = "Connecting with others is powerful. It looks like it boosted your spirits today!";
-  else if (analysis.labels.includes('Fatigue') && analysis.activities.includes('Work')) insightText = "We noticed you logged 'Work' and are feeling fatigued. Remember to take regular breaks to recharge.";
-  if (!insightText) return null;
-  return (
-    <div className="mt-4 bg-green-50 border border-green-200 rounded-lg p-4">
-      <h3 className="font-bold text-lg text-green-800 flex items-center">📈 Correlation Insight</h3>
-      <p className="text-green-700 mt-2">{insightText}</p>
-    </div>
-  );
+  if (!analysis.activities || analysis.activities.length === 0) return null; let insightText = null; if(analysis.sentiment==='POSITIVE'&&analysis.activities.includes('Exercise'))insightText="Exercising seems to positively impact your mood."; else if(analysis.sentiment==='POSITIVE'&&analysis.activities.includes('Social'))insightText="Connecting with others boosted your spirits!"; else if(analysis.labels.includes('Fatigue')&&analysis.activities.includes('Work'))insightText="Work logged & feeling fatigued. Remember to take breaks."; if(!insightText) return null;
+  return ( <div className="mt-4 bg-green-50 border border-green-200 rounded-lg p-4"><h3 className="font-bold text-lg text-green-800 flex items-center">📈 Correlation Insight</h3><p className="text-green-700 mt-2 text-sm">{insightText}</p></div> );
 }
 
-
 // ==================================================================
-// APP WRAPPER (Main Export)
+// APP WRAPPER (Main Export - handles Auth loading)
 // ==================================================================
 export default function AppWrapper() {
   const { user, loading } = useAuth();
-
-  if (loading) {
-    return (
-      <div className="flex min-h-screen items-center justify-center bg-slate-50">
-        <Loader2 size={48} className="text-indigo-600 animate-spin" />
-      </div>
-    );
-  }
-
-  if (!user) {
-    return <LoginScreen />;
-  }
-
-  // If the user is logged in, show the main homepage
+  if (loading) { return ( <div className="flex min-h-screen items-center justify-center bg-slate-50"><Loader2 size={48} className="text-indigo-600 animate-spin" /></div> ); }
+  if (!user) { return <LoginScreen />; }
+  // User is loaded and logged in, show the main app
   return <HomePage user={user} />;
 }
 
 // ==================================================================
-// HOME PAGE (The main app)
+// HOME PAGE (The main app logic and layout)
 // ==================================================================
 function HomePage({ user }: { user: User }) {
   // --- State Variables ---
   const [journalText, setJournalText] = useState('');
   const [selectedActivities, setSelectedActivities] = useState<string[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoadingAnalysis, setIsLoadingAnalysis] = useState(false);
   const [analysis, setAnalysis] = useState<AnalysisResult | null>(null);
   const [error, setError] = useState('');
   const [showBreathingExercise, setShowBreathingExercise] = useState(false);
   const [streak, setStreak] = useState(0);
   const [view, setView] = useState<View>('journal');
   const [journalHistory, setJournalHistory] = useState<JournalEntry[]>([]);
-  const [habits, setHabits] = useState<Habit[]>(initialHabits); // Initialize with default
+  const [habits, setHabits] = useState<Habit[]>(initialHabits);
 
-  // --- Data Loading Effect ---
+  // --- Data Loading Effect (Firestore Listeners) ---
   useEffect(() => {
     if (!user) return;
 
-    // --- Profile Listener (Streak & Habits) ---
+    // --- Profile Listener ---
     const profileDocRef = doc(db, 'users', user.uid);
     const unsubscribeProfile = onSnapshot(profileDocRef, (docSnap) => {
       if (docSnap.exists()) {
         const data = docSnap.data();
-
-        // Streak logic
         const streakData = data.streakData || { streakCount: 0, lastJournalDate: null };
-        const today = getISODate(new Date());
-        const yesterday = getISODate(new Date(Date.now() - 86400000));
-
-        if (streakData.lastJournalDate === today || streakData.lastJournalDate === yesterday) {
-          setStreak(streakData.streakCount);
-        } else if (streakData.lastJournalDate) {
-          setStreak(0); // Streak is broken
-        } else {
-            setStreak(0); // Ensure streak is 0 if no data
-        }
-
-        // Habits logic - use default if none exist in DB
+        const today = getISODate(new Date()); const yesterday = getISODate(new Date(Date.now() - 86400000));
+        if (streakData.lastJournalDate === today || streakData.lastJournalDate === yesterday) setStreak(streakData.streakCount);
+        else if (streakData.lastJournalDate) setStreak(0);
+        else setStreak(0);
         setHabits(data.habits || initialHabits);
       } else {
-        // Create a new user profile document if it doesn't exist
-        setDoc(profileDocRef, {
-          email: user.email || 'guest',
-          streakData: { streakCount: 0, lastJournalDate: null },
-          habits: initialHabits
-        });
-        setHabits(initialHabits); // Set initial habits locally too
-        setStreak(0); // Ensure streak is 0 for new users
+        setDoc(profileDocRef, { email: user.email || `guest_${user.uid.substring(0,6)}`, streakData: { streakCount: 0, lastJournalDate: null }, habits: initialHabits });
+        setHabits(initialHabits); setStreak(0);
       }
-    }, (error) => {
-      console.error("Error fetching user profile:", error);
-      // Handle error appropriately, maybe show a message to the user
-      setError("Could not load your profile data.");
-    });
+    }, (error) => { console.error("Error fetching profile:", error); setError("Could not load profile."); });
 
     // --- Journal History Listener ---
     const journalsColRef = collection(db, 'users', user.uid, 'journals');
@@ -734,158 +570,97 @@ function HomePage({ user }: { user: User }) {
     const unsubscribeJournals = onSnapshot(q, (snapshot) => {
       const history = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as JournalEntry));
       setJournalHistory(history);
-    }, (error) => {
-      console.error("Error fetching journal history:", error);
-      setError("Could not load your journal history.");
-    });
+    }, (error) => { console.error("Error fetching journals:", error); setError("Could not load journal history."); });
 
-    return () => {
-      unsubscribeProfile();
-      unsubscribeJournals();
-    };
+    return () => { unsubscribeProfile(); unsubscribeJournals(); }; // Cleanup
   }, [user]);
 
   // --- Handlers ---
   const handleAnalyze = async () => {
-    if (!user || !journalText.trim()) {
-      setError('Please write something in your journal first.');
-      return;
-    }
-    setIsLoading(true); setError(''); setAnalysis(null);
+    if (!user || !journalText.trim()) { setError('Please write something first.'); return; }
+    setIsLoadingAnalysis(true); setError(''); setAnalysis(null);
     try {
-      const response = await axios.post('http://127.0.0.1:8000/analyze', { text: journalText, activities: selectedActivities });
+      const backendUrl = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8000/analyze';
+      const response = await axios.post(backendUrl, { text: journalText, activities: selectedActivities });
       if (response.data.error) throw new Error(response.data.error);
       setAnalysis(response.data);
 
-      // Save new journal entry to Firestore
-      const newEntry = {
-        date: serverTimestamp(),
-        sentiment: response.data.sentiment,
-        labels: response.data.labels,
-        activities: response.data.activities,
-        originalText: journalText,
-      };
+      const newEntry = { date: serverTimestamp(), sentiment: response.data.sentiment, labels: response.data.labels, activities: response.data.activities, originalText: journalText };
       await addDoc(collection(db, 'users', user.uid, 'journals'), newEntry);
 
-      // Update streak in Firestore
       const profileDocRef = doc(db, 'users', user.uid);
       const profileDoc = await getDoc(profileDocRef);
-      // Use profileDoc.data() directly, ensuring it exists after creation
       const streakData = profileDoc.exists() ? profileDoc.data().streakData : { streakCount: 0, lastJournalDate: null };
-
-      const today = getISODate(new Date());
-      const yesterday = getISODate(new Date(Date.now() - 86400000));
-      let newStreakCount = streakData?.streakCount || 0; // Default to 0 if streakData is null/undefined
-
-      if (streakData?.lastJournalDate === today) { /* No change */ }
-      else if (streakData?.lastJournalDate === yesterday) newStreakCount += 1;
-      else newStreakCount = 1;
-
+      const today = getISODate(new Date()); const yesterday = getISODate(new Date(Date.now() - 86400000));
+      let newStreakCount = streakData?.streakCount || 0;
+      if (streakData?.lastJournalDate === today) {} else if (streakData?.lastJournalDate === yesterday) newStreakCount += 1; else newStreakCount = 1;
       await setDoc(profileDocRef, { streakData: { streakCount: newStreakCount, lastJournalDate: today } }, { merge: true });
 
-      // Clear the form
-      setJournalText('');
-      setSelectedActivities([]);
-
-    } catch (err) {
-      console.error(err);
-      setError('Sorry, we couldn\'t analyze your entry. The AI server might be busy or offline.');
-    } finally {
-      setIsLoading(false);
-    }
+      setJournalText(''); setSelectedActivities([]);
+    } catch (err: any) { console.error(err); setError(`Analysis failed: ${err.message || 'Server error'}`); }
+    finally { setIsLoadingAnalysis(false); }
   };
 
   const handleHabitUpdate = async (id: string) => {
     const updatedHabits = habits.map(h => (h.id === id && h.progress < h.target) ? { ...h, progress: h.progress + 1 } : h);
-    setHabits(updatedHabits); // Optimistic update
-    try {
-        const profileDocRef = doc(db, 'users', user.uid);
-        await setDoc(profileDocRef, { habits: updatedHabits }, { merge: true });
-    } catch (error) {
-        console.error("Error updating habits:", error);
-        setError("Could not save habit progress.");
-        // Optional: Revert local state if save fails
-        // setHabits(habits);
-    }
+    setHabits(updatedHabits);
+    try { await setDoc(doc(db, 'users', user.uid), { habits: updatedHabits }, { merge: true }); }
+    catch (error) { console.error("Err saving habit:", error); setError("Failed to save habit."); }
   };
 
   const handleHabitReset = async () => {
-    const resetHabits = habits.map(h => ({ ...h, progress: 0 }));
-    setHabits(resetHabits); // Optimistic update
-    try {
-        const profileDocRef = doc(db, 'users', user.uid);
-        await setDoc(profileDocRef, { habits: resetHabits }, { merge: true });
-    } catch (error) {
-        console.error("Error resetting habits:", error);
-        setError("Could not reset habit progress.");
-        // Optional: Revert local state if save fails
-        // setHabits(habits);
-    }
+    const resetHabits = initialHabits.map(h => ({ ...h, progress: 0 }));
+    setHabits(resetHabits);
+    try { await setDoc(doc(db, 'users', user.uid), { habits: resetHabits }, { merge: true }); }
+    catch (error) { console.error("Err resetting habits:", error); setError("Failed to reset habits."); }
   };
-
 
   // --- Render JSX ---
   return (
     <>
       {showBreathingExercise && <BreathingExercise onClose={() => setShowBreathingExercise(false)} />}
       <main className="flex min-h-screen flex-col items-center bg-slate-50 font-sans">
-        <header className="w-full max-w-2xl px-4 pt-6">
-          <div className="flex justify-between items-center">
+        {/* Header */}
+        <header className="w-full max-w-3xl px-4 pt-6 sticky top-0 z-20 bg-slate-50/80 backdrop-blur-sm">
+          <div className="flex justify-between items-center pb-2 border-b border-slate-200">
             <h1 className="text-3xl font-bold text-indigo-800">Aura</h1>
             <div className="flex items-center gap-4">
               <StreakTracker streak={streak} />
-              <button onClick={() => auth.signOut()} className="p-2 rounded-full hover:bg-slate-200" title="Log Out">
-                <LogOut size={20} className="text-slate-600"/>
-              </button>
+              <button onClick={() => auth.signOut()} className="p-2 rounded-full hover:bg-slate-200" title="Log Out"><LogOut size={20} className="text-slate-600"/></button>
             </div>
           </div>
         </header>
 
-        <nav className="w-full max-w-2xl p-4 sticky top-0 z-10 bg-slate-50">
-          <div className="flex justify-center space-x-2 rounded-lg bg-slate-200 p-1.5">
+        {/* Navigation Tabs */}
+        <nav className="w-full max-w-3xl p-4 sticky top-[73px] z-10 bg-slate-50/80 backdrop-blur-sm"> {/* Adjust top value based on header height */}
+          <div className="flex justify-center space-x-2 rounded-lg bg-slate-200 p-1.5 shadow-sm">
             <TabButton icon={<BookOpen size={18} />} label="Journal" isActive={view === 'journal'} onClick={() => setView('journal')} />
             <TabButton icon={<LayoutDashboard size={18} />} label="Dashboard" isActive={view === 'dashboard'} onClick={() => setView('dashboard')} />
+            <TabButton icon={<Users size={18} />} label="Find Support" isActive={view === 'support'} onClick={() => setView('support')} />
           </div>
         </nav>
 
-        <div className="w-full max-w-2xl p-4 pb-20"> {/* Add padding-bottom */}
+        {/* Main Content Area */}
+        <div className="w-full max-w-3xl p-4 pb-20">
+          {error && <div className="mb-4 p-4 text-sm text-red-700 bg-red-100 rounded-lg shadow-md" role="alert">{error}</div>}
+
           {/* JOURNAL TAB */}
           {view === 'journal' && (
             <div className="animate-fade-in space-y-6">
               <div className="bg-white p-6 rounded-2xl shadow-lg">
-                <textarea value={journalText} onChange={(e) => setJournalText(e.target.value)} placeholder="How are you feeling today?" className="w-full h-40 p-3 border-slate-200 border rounded-xl focus:ring-2 focus:ring-indigo-500 focus:outline-none" disabled={isLoading} />
-                <div className="mt-4">
-                  <h3 className="text-md font-semibold text-slate-700 mb-2">What did you do today?</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {ALL_ACTIVITIES.map(activity => <button key={activity} onClick={() => setSelectedActivities(p => p.includes(activity) ? p.filter(a => a !== activity) : [...p, activity])} className={`px-3 py-1.5 text-sm font-medium rounded-full border transition-all ${selectedActivities.includes(activity) ? 'bg-indigo-600 text-white border-indigo-600' : 'bg-white text-slate-700 border-slate-300 hover:bg-slate-100'}`}>{activity}</button>)}
-                  </div>
-                </div>
-                <button onClick={handleAnalyze} disabled={isLoading} className="w-full mt-6 bg-indigo-600 text-white font-bold py-3 px-4 rounded-xl hover:bg-indigo-700 disabled:bg-slate-400 disabled:cursor-not-allowed shadow-md flex items-center justify-center">
-                  {isLoading && <Loader2 size={20} className="mr-2 animate-spin" />}
-                  {isLoading ? 'Analyzing...' : 'Analyze My Feelings'}
-                </button>
+                <textarea value={journalText} onChange={(e) => setJournalText(e.target.value)} placeholder="How are you feeling today?" className="w-full h-40 p-3 border-slate-200 border rounded-xl focus:ring-2 focus:ring-indigo-500 focus:outline-none" disabled={isLoadingAnalysis} />
+                <div className="mt-4"><h3 className="text-md font-semibold text-slate-700 mb-2">What did you do today?</h3><div className="flex flex-wrap gap-2">{ALL_ACTIVITIES.map(activity => <button key={activity} onClick={() => setSelectedActivities(p => p.includes(activity) ? p.filter(a => a !== activity) : [...p, activity])} className={`px-3 py-1.5 text-sm font-medium rounded-full border transition-all ${selectedActivities.includes(activity) ? 'bg-indigo-600 text-white border-indigo-600' : 'bg-white text-slate-700 border-slate-300 hover:bg-slate-100'}`}>{activity}</button>)}</div></div>
+                <button onClick={handleAnalyze} disabled={isLoadingAnalysis} className="w-full mt-6 bg-indigo-600 text-white font-bold py-3 px-4 rounded-xl hover:bg-indigo-700 disabled:bg-slate-400 disabled:cursor-not-allowed shadow-md flex items-center justify-center"> {isLoadingAnalysis && <Loader2 size={20} className="mr-2 animate-spin" />} {isLoadingAnalysis ? 'Analyzing...' : 'Analyze & Save Journal'} </button>
               </div>
-              {error && <p className="text-rose-500 text-center mt-4">{error}</p>}
-              {analysis && (
-                <div className="bg-white p-6 rounded-2xl shadow-lg animate-fade-in">
-                  <h2 className="text-2xl font-bold text-slate-800 mb-4">Your Analysis</h2>
-                  <div className="flex flex-wrap gap-2"><Tag label={analysis.sentiment} type="sentiment" />{analysis.labels.map(label => <Tag key={label} label={label} type="label" />)}{analysis.activities.map(activity => <Tag key={activity} label={activity} type="activity" />)}</div>
-                  <InsightCard analysis={analysis} /><CorrelationCard analysis={analysis} />
-                  {analysis.labels.includes("Anxiety") && <button onClick={() => setShowBreathingExercise(true)} className="w-full mt-4 bg-violet-600 text-white font-bold py-2 px-4 rounded-xl hover:bg-violet-700">Try a Guided Breathing Exercise</button>}
-                </div>
-              )}
+              {analysis && ( <div className="bg-white p-6 rounded-2xl shadow-lg animate-fade-in"><h2 className="text-2xl font-bold text-slate-800 mb-4">Your Analysis</h2><div className="flex flex-wrap gap-2"><Tag label={analysis.sentiment} type="sentiment"/>{analysis.labels.map(l=><Tag key={l} label={l} type="label"/>)}{analysis.activities.map(a=><Tag key={a} label={a} type="activity"/>)}</div><InsightCard analysis={analysis}/><CorrelationCard analysis={analysis}/> {analysis.labels.includes("Anxiety") && <button onClick={()=>setShowBreathingExercise(true)} className="w-full mt-4 bg-violet-600 text-white font-bold py-2 px-4 rounded-xl hover:bg-violet-700">Try Guided Breathing</button>}</div> )}
             </div>
           )}
 
           {/* DASHBOARD TAB */}
-          {view === 'dashboard' && (
-            <div className="animate-fade-in space-y-6">
-              <MoodChart history={journalHistory} />
-              <GoalTracker habits={habits} onUpdate={handleHabitUpdate} onReset={handleHabitReset} />
-              <WeeklySummary history={journalHistory} />
-              <JournalHistory history={journalHistory} />
-            </div>
-          )}
+          {view === 'dashboard' && ( <div className="animate-fade-in space-y-6"><MoodChart history={journalHistory}/><GoalTracker habits={habits} onUpdate={handleHabitUpdate} onReset={handleHabitReset}/><WeeklySummary history={journalHistory}/><JournalHistory history={journalHistory}/></div> )}
+
+          {/* FIND SUPPORT TAB */}
+          {view === 'support' && ( <div className="animate-fade-in space-y-6"><CounselorList /></div> )}
         </div>
       </main>
     </>

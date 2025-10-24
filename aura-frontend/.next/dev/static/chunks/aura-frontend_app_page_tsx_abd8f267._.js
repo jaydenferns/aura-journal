@@ -6,7 +6,7 @@
   "static/chunks/20e33_chart_js_dist_b9c38026._.js",
   "static/chunks/20e33_@firebase_firestore_dist_index_esm_fa59d548.js",
   "static/chunks/20e33_@firebase_auth_dist_esm_956727ea._.js",
-  "static/chunks/20e33_06887a7d._.js"
+  "static/chunks/20e33_4aa97abb._.js"
 ],
     source: "dynamic"
 });

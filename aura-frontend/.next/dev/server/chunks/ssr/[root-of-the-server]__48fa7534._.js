@@ -159,9 +159,7 @@ const auth = (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$fronten
 
 __turbopack_context__.s([
     "default",
-    ()=>AppWrapper,
-    "getPersonalizedStrategy",
-    ()=>getPersonalizedStrategy
+    ()=>AppWrapper
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/aura-frontend/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 // React & Next.js imports
@@ -179,10 +177,12 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_mod
 var __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$meh$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Meh$3e$__ = __turbopack_context__.i("[project]/aura-frontend/node_modules/lucide-react/dist/esm/icons/meh.js [app-ssr] (ecmascript) <export default as Meh>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sparkles$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Sparkles$3e$__ = __turbopack_context__.i("[project]/aura-frontend/node_modules/lucide-react/dist/esm/icons/sparkles.js [app-ssr] (ecmascript) <export default as Sparkles>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$right$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronRight$3e$__ = __turbopack_context__.i("[project]/aura-frontend/node_modules/lucide-react/dist/esm/icons/chevron-right.js [app-ssr] (ecmascript) <export default as ChevronRight>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$users$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Users$3e$__ = __turbopack_context__.i("[project]/aura-frontend/node_modules/lucide-react/dist/esm/icons/users.js [app-ssr] (ecmascript) <export default as Users>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$external$2d$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ExternalLink$3e$__ = __turbopack_context__.i("[project]/aura-frontend/node_modules/lucide-react/dist/esm/icons/external-link.js [app-ssr] (ecmascript) <export default as ExternalLink>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$react$2d$chartjs$2d$2$2f$dist$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/aura-frontend/node_modules/react-chartjs-2/dist/index.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$chart$2e$js$2f$dist$2f$chart$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_context__.i("[project]/aura-frontend/node_modules/chart.js/dist/chart.js [app-ssr] (ecmascript) <locals>");
 // Firebase & Auth imports
-var __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$app$2f$firebaseConfig$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/aura-frontend/app/firebaseConfig.ts [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$app$2f$firebaseConfig$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/aura-frontend/app/firebaseConfig.ts [app-ssr] (ecmascript)"); // Assuming firebaseConfig.ts exists and exports these
 var __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$firebase$2f$firestore$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_context__.i("[project]/aura-frontend/node_modules/firebase/firestore/dist/index.mjs [app-ssr] (ecmascript) <locals>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$node$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/aura-frontend/node_modules/@firebase/firestore/dist/index.node.mjs [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$firebase$2f$auth$2f$dist$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_context__.i("[project]/aura-frontend/node_modules/firebase/auth/dist/index.mjs [app-ssr] (ecmascript) <locals>");
@@ -243,8 +243,8 @@ const getISODate = (date)=>{
 // ==================================================================
 const strategyLibrary = [
     {
-        title: "Feeling Anxious about Work?",
-        text: "Try the 'Urgent-Important Matrix' to organize your tasks. Focusing on what's truly important can reduce feelings of being overwhelmed.",
+        title: "Anxious about Work?",
+        text: "Try the 'Urgent-Important Matrix' to organize tasks.",
         emoji: "📋",
         requiredTags: [
             "Anxiety",
@@ -252,8 +252,8 @@ const strategyLibrary = [
         ]
     },
     {
-        title: "Feeling Down about Relationships?",
-        text: "Consider writing a short, positive message to a friend or family member. Expressing gratitude can strengthen bonds and lift your spirits.",
+        title: "Down about Relationships?",
+        text: "Write a short, positive message to someone you care about.",
         emoji: "💌",
         requiredTags: [
             "Sadness",
@@ -262,7 +262,7 @@ const strategyLibrary = [
     },
     {
         title: "Feeling Fatigued?",
-        text: "Your energy seems low. A short, 10-minute walk can boost circulation and mental clarity more effectively than staying seated.",
+        text: "A short 10-minute walk can boost circulation and mental clarity.",
         emoji: "🚶‍♀️",
         requiredTags: [
             "Fatigue"
@@ -270,7 +270,7 @@ const strategyLibrary = [
     },
     {
         title: "Feeling Anxious?",
-        text: "When you feel overwhelmed, try the 4-7-8 breathing technique. Inhale for 4s, hold for 7s, and exhale for 8s to calm your nervous system.",
+        text: "Try the 4-7-8 breathing technique: Inhale 4s, Hold 7s, Exhale 8s.",
         emoji: "🌬️",
         requiredTags: [
             "Anxiety"
@@ -278,7 +278,7 @@ const strategyLibrary = [
     },
     {
         title: "Feeling Sad?",
-        text: "It's okay to feel this way. Try writing down three small things you are grateful for today. This practice can gently shift your perspective.",
+        text: "Write down three small things you are grateful for today.",
         emoji: "❤️",
         requiredTags: [
             "Sadness"
@@ -293,9 +293,7 @@ function getPersonalizedStrategy(analysis) {
         ...analysis.activities
     ];
     for (const strategy of strategyLibrary){
-        const score = strategy.requiredTags.reduce((acc, tag)=>{
-            return allUserTags.includes(tag) ? acc + 1 : acc;
-        }, 0);
+        const score = strategy.requiredTags.reduce((acc, tag)=>allUserTags.includes(tag) ? acc + 1 : acc, 0);
         if (score > highestScore) {
             highestScore = score;
             bestMatch = strategy;
@@ -303,7 +301,7 @@ function getPersonalizedStrategy(analysis) {
     }
     return bestMatch || {
         title: "Your Daily Insight ✨",
-        text: "Reflecting on your feelings is a powerful step. Notice the patterns in your thoughts and activities.",
+        text: "Reflecting on your feelings is a powerful step.",
         emoji: "🧠",
         requiredTags: []
     };
@@ -315,11 +313,12 @@ function useAuth() {
     const [user, setUser] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
     const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(true);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        // Ensure Firebase auth is initialized before listening
         const unsubscribe = (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f40$firebase$2f$auth$2f$dist$2f$node$2d$esm$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["onAuthStateChanged"])(__TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$app$2f$firebaseConfig$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["auth"], (user)=>{
             setUser(user);
             setLoading(false);
         });
-        return ()=>unsubscribe();
+        return ()=>unsubscribe(); // Cleanup listener on component unmount
     }, []);
     return {
         user,
@@ -327,7 +326,7 @@ function useAuth() {
     };
 }
 // ==================================================================
-// UI COMPONENTS
+// UI COMPONENTS (Merged into one file)
 // ==================================================================
 // ---------------------------------
 // LoginScreen Component
@@ -367,21 +366,21 @@ function LoginScreen() {
                             children: "Aura"
                         }, void 0, false, {
                             fileName: "[project]/aura-frontend/app/page.tsx",
-                            lineNumber: 200,
-                            columnNumber: 11
+                            lineNumber: 152,
+                            columnNumber: 35
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                             className: "text-xl text-slate-600 mt-2",
                             children: "Your private space to reflect and grow."
                         }, void 0, false, {
                             fileName: "[project]/aura-frontend/app/page.tsx",
-                            lineNumber: 201,
-                            columnNumber: 11
+                            lineNumber: 152,
+                            columnNumber: 95
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/aura-frontend/app/page.tsx",
-                    lineNumber: 199,
+                    lineNumber: 152,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -392,8 +391,8 @@ function LoginScreen() {
                             children: "Welcome Back"
                         }, void 0, false, {
                             fileName: "[project]/aura-frontend/app/page.tsx",
-                            lineNumber: 204,
-                            columnNumber: 11
+                            lineNumber: 153,
+                            columnNumber: 61
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                             onClick: handleGoogleLogin,
@@ -405,21 +404,21 @@ function LoginScreen() {
                                     className: "mr-2 animate-spin"
                                 }, void 0, false, {
                                     fileName: "[project]/aura-frontend/app/page.tsx",
-                                    lineNumber: 210,
+                                    lineNumber: 155,
                                     columnNumber: 32
                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sparkles$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Sparkles$3e$__["Sparkles"], {
                                     size: 20,
                                     className: "mr-2"
                                 }, void 0, false, {
                                     fileName: "[project]/aura-frontend/app/page.tsx",
-                                    lineNumber: 210,
+                                    lineNumber: 155,
                                     columnNumber: 86
                                 }, this),
-                                "Sign in with Google"
+                                " Sign in with Google"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/aura-frontend/app/page.tsx",
-                            lineNumber: 205,
+                            lineNumber: 154,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -432,27 +431,27 @@ function LoginScreen() {
                                     className: "mr-2 animate-spin"
                                 }, void 0, false, {
                                     fileName: "[project]/aura-frontend/app/page.tsx",
-                                    lineNumber: 218,
+                                    lineNumber: 158,
                                     columnNumber: 31
                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$right$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronRight$3e$__["ChevronRight"], {
                                     size: 20,
                                     className: "mr-2"
                                 }, void 0, false, {
                                     fileName: "[project]/aura-frontend/app/page.tsx",
-                                    lineNumber: 218,
+                                    lineNumber: 158,
                                     columnNumber: 85
                                 }, this),
-                                "Continue as Guest"
+                                " Continue as Guest"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/aura-frontend/app/page.tsx",
-                            lineNumber: 213,
+                            lineNumber: 157,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/aura-frontend/app/page.tsx",
-                    lineNumber: 203,
+                    lineNumber: 153,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -460,18 +459,18 @@ function LoginScreen() {
                     children: "By signing in, you agree to our Terms of Service."
                 }, void 0, false, {
                     fileName: "[project]/aura-frontend/app/page.tsx",
-                    lineNumber: 222,
-                    columnNumber: 9
+                    lineNumber: 160,
+                    columnNumber: 15
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/aura-frontend/app/page.tsx",
-            lineNumber: 198,
+            lineNumber: 151,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/aura-frontend/app/page.tsx",
-        lineNumber: 197,
+        lineNumber: 150,
         columnNumber: 5
     }, this);
 }
@@ -479,7 +478,8 @@ function LoginScreen() {
 // StreakTracker Component
 // ---------------------------------
 function StreakTracker({ streak }) {
-    if (streak === 0) return null; // Don't show the streak if it's 0
+    // Only render if streak is positive
+    if (streak === 0) return null;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "flex items-center gap-2 bg-white px-3 py-2 rounded-full shadow-sm border border-slate-200 animate-pop-in",
         children: [
@@ -490,7 +490,7 @@ function StreakTracker({ streak }) {
                 children: "🔥"
             }, void 0, false, {
                 fileName: "[project]/aura-frontend/app/page.tsx",
-                lineNumber: 238,
+                lineNumber: 174,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -498,13 +498,13 @@ function StreakTracker({ streak }) {
                 children: streak
             }, void 0, false, {
                 fileName: "[project]/aura-frontend/app/page.tsx",
-                lineNumber: 239,
+                lineNumber: 175,
                 columnNumber: 7
             }, this)
         ]
     }, streak, true, {
         fileName: "[project]/aura-frontend/app/page.tsx",
-        lineNumber: 237,
+        lineNumber: 173,
         columnNumber: 5
     }, this);
 }
@@ -538,7 +538,7 @@ function BreathingExercise({ onClose }) {
             const nextCycleIndex = cycleIndex + 1;
             if (nextCycleIndex >= phases.length * totalCycles) {
                 clearInterval(interval);
-                onClose();
+                onClose(); // Close the modal when done
                 return;
             }
             const phase = phases[nextCycleIndex % 3];
@@ -546,12 +546,13 @@ function BreathingExercise({ onClose }) {
             setInstruction(phase.name);
             setCountdown(phase.duration);
         }
+        // Cleanup interval on unmount or when countdown changes
         return ()=>clearInterval(interval);
     }, [
         countdown,
         cycleIndex,
         onClose
-    ]);
+    ]); // Add onClose to dependency array
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "fixed inset-0 bg-indigo-900 bg-opacity-95 flex flex-col items-center justify-center z-50 animate-fade-in",
         children: [
@@ -561,15 +562,15 @@ function BreathingExercise({ onClose }) {
                 children: "×"
             }, void 0, false, {
                 fileName: "[project]/aura-frontend/app/page.tsx",
-                lineNumber: 280,
+                lineNumber: 213,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "text-center",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "w-48 h-48 rounded-full border-4 border-white flex items-center justify-center transition-all duration-1000",
+                    className: "w-48 h-48 rounded-full border-4 border-white flex items-center justify-center transition-transform duration-1000 ease-in-out",
                     style: {
-                        transform: cycleIndex % 3 === 0 ? 'scale(1.1)' : 'scale(1)'
+                        transform: instruction === 'Inhale' ? 'scale(1.1)' : 'scale(1)'
                     },
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         children: [
@@ -578,7 +579,7 @@ function BreathingExercise({ onClose }) {
                                 children: instruction
                             }, void 0, false, {
                                 fileName: "[project]/aura-frontend/app/page.tsx",
-                                lineNumber: 287,
+                                lineNumber: 220,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -586,29 +587,29 @@ function BreathingExercise({ onClose }) {
                                 children: countdown
                             }, void 0, false, {
                                 fileName: "[project]/aura-frontend/app/page.tsx",
-                                lineNumber: 288,
+                                lineNumber: 221,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/aura-frontend/app/page.tsx",
-                        lineNumber: 286,
+                        lineNumber: 219,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/aura-frontend/app/page.tsx",
-                    lineNumber: 282,
+                    lineNumber: 215,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/aura-frontend/app/page.tsx",
-                lineNumber: 281,
+                lineNumber: 214,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/aura-frontend/app/page.tsx",
-        lineNumber: 279,
+        lineNumber: 212,
         columnNumber: 5
     }, this);
 }
@@ -616,8 +617,8 @@ function BreathingExercise({ onClose }) {
 // GoalTracker Component
 // ---------------------------------
 function GoalTracker({ habits, onUpdate, onReset }) {
+    // Show loading skeleton if habits haven't loaded
     if (!habits || habits.length === 0) {
-        // Render a placeholder or return null if habits haven't loaded yet
         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "bg-white p-6 rounded-2xl shadow-lg animate-pulse",
             children: [
@@ -625,8 +626,8 @@ function GoalTracker({ habits, onUpdate, onReset }) {
                     className: "h-6 bg-slate-200 rounded w-3/4 mb-4"
                 }, void 0, false, {
                     fileName: "[project]/aura-frontend/app/page.tsx",
-                    lineNumber: 304,
-                    columnNumber: 13
+                    lineNumber: 237,
+                    columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "space-y-4",
@@ -635,34 +636,34 @@ function GoalTracker({ habits, onUpdate, onReset }) {
                             className: "h-10 bg-slate-200 rounded"
                         }, void 0, false, {
                             fileName: "[project]/aura-frontend/app/page.tsx",
-                            lineNumber: 306,
-                            columnNumber: 17
+                            lineNumber: 239,
+                            columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "h-10 bg-slate-200 rounded"
                         }, void 0, false, {
                             fileName: "[project]/aura-frontend/app/page.tsx",
-                            lineNumber: 307,
-                            columnNumber: 17
+                            lineNumber: 240,
+                            columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "h-10 bg-slate-200 rounded"
                         }, void 0, false, {
                             fileName: "[project]/aura-frontend/app/page.tsx",
-                            lineNumber: 308,
-                            columnNumber: 17
+                            lineNumber: 241,
+                            columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/aura-frontend/app/page.tsx",
-                    lineNumber: 305,
-                    columnNumber: 13
+                    lineNumber: 238,
+                    columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/aura-frontend/app/page.tsx",
-            lineNumber: 303,
-            columnNumber: 9
+            lineNumber: 236,
+            columnNumber: 7
         }, this);
     }
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -676,22 +677,22 @@ function GoalTracker({ habits, onUpdate, onReset }) {
                         children: "This Week's Goals"
                     }, void 0, false, {
                         fileName: "[project]/aura-frontend/app/page.tsx",
-                        lineNumber: 317,
+                        lineNumber: 250,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         onClick: onReset,
                         className: "text-sm font-medium text-indigo-600 hover:text-indigo-800",
-                        children: "Reset"
+                        children: "Reset Progress"
                     }, void 0, false, {
                         fileName: "[project]/aura-frontend/app/page.tsx",
-                        lineNumber: 318,
+                        lineNumber: 251,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/aura-frontend/app/page.tsx",
-                lineNumber: 316,
+                lineNumber: 249,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -710,7 +711,7 @@ function GoalTracker({ habits, onUpdate, onReset }) {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/aura-frontend/app/page.tsx",
-                                        lineNumber: 324,
+                                        lineNumber: 257,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -722,13 +723,13 @@ function GoalTracker({ habits, onUpdate, onReset }) {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/aura-frontend/app/page.tsx",
-                                        lineNumber: 325,
+                                        lineNumber: 258,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/aura-frontend/app/page.tsx",
-                                lineNumber: 323,
+                                lineNumber: 256,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -736,16 +737,16 @@ function GoalTracker({ habits, onUpdate, onReset }) {
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "bg-indigo-600 h-2.5 rounded-full transition-all duration-300",
                                     style: {
-                                        width: `${habit.progress / habit.target * 100}%`
+                                        width: `${Math.min(100, habit.progress / habit.target * 100)}%`
                                     }
                                 }, void 0, false, {
                                     fileName: "[project]/aura-frontend/app/page.tsx",
-                                    lineNumber: 328,
+                                    lineNumber: 261,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/aura-frontend/app/page.tsx",
-                                lineNumber: 327,
+                                lineNumber: 260,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -755,24 +756,24 @@ function GoalTracker({ habits, onUpdate, onReset }) {
                                 children: "Log +1"
                             }, void 0, false, {
                                 fileName: "[project]/aura-frontend/app/page.tsx",
-                                lineNumber: 333,
+                                lineNumber: 266,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, habit.id, true, {
                         fileName: "[project]/aura-frontend/app/page.tsx",
-                        lineNumber: 322,
+                        lineNumber: 255,
                         columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/aura-frontend/app/page.tsx",
-                lineNumber: 320,
+                lineNumber: 253,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/aura-frontend/app/page.tsx",
-        lineNumber: 315,
+        lineNumber: 248,
         columnNumber: 5
     }, this);
 }
@@ -785,17 +786,22 @@ function MoodChart({ history }) {
     });
     const [hasEnoughData, setHasEnoughData] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        // Only run this logic in the browser
         if ("TURBOPACK compile-time truthy", 1) return;
         //TURBOPACK unreachable
         ;
         const sevenDaysAgo = undefined;
+        // Filter entries from the last 7 days
         const recentEntries = undefined;
+        // Sort entries chronologically for the chart
         const sortedEntries = undefined;
+        // Prepare data for Chart.js
         const labels = undefined;
         const dataPoints = undefined;
     }, [
         history
-    ]);
+    ]); // Re-run effect when history data changes
+    // Display message if not enough data
     if (!hasEnoughData) {
         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "bg-white p-6 rounded-2xl shadow-lg",
@@ -805,7 +811,7 @@ function MoodChart({ history }) {
                     children: "Mood Analytics"
                 }, void 0, false, {
                     fileName: "[project]/aura-frontend/app/page.tsx",
-                    lineNumber: 398,
+                    lineNumber: 330,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -815,23 +821,25 @@ function MoodChart({ history }) {
                         children: "Journal for a few more days to see your mood trend chart!"
                     }, void 0, false, {
                         fileName: "[project]/aura-frontend/app/page.tsx",
-                        lineNumber: 400,
+                        lineNumber: 332,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/aura-frontend/app/page.tsx",
-                    lineNumber: 399,
+                    lineNumber: 331,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/aura-frontend/app/page.tsx",
-            lineNumber: 397,
+            lineNumber: 329,
             columnNumber: 7
         }, this);
     }
+    // Chart configuration
     const chartOptions = {
         responsive: true,
+        maintainAspectRatio: false,
         plugins: {
             legend: {
                 display: false
@@ -843,6 +851,20 @@ function MoodChart({ history }) {
                     size: 16,
                     weight: 'bold'
                 }
+            },
+            tooltip: {
+                callbacks: {
+                    label: function(context) {
+                        let label = context.dataset.label || '';
+                        if (label) {
+                            label += ': ';
+                        }
+                        if (context.parsed.y === 1) label += 'Positive';
+                        else if (context.parsed.y === -1) label += 'Negative';
+                        else if (context.parsed.y === 0) label += 'Neutral';
+                        return label;
+                    }
+                }
             }
         },
         scales: {
@@ -852,32 +874,50 @@ function MoodChart({ history }) {
                         if (value === 1) return 'Positive';
                         if (value === -1) return 'Negative';
                         if (value === 0) return 'Neutral';
-                        return null;
-                    }
+                        return null; // Hide other ticks
+                    },
+                    stepSize: 1 // Only show ticks at -1, 0, 1
                 },
                 min: -1.5,
-                max: 1.5
+                max: 1.5,
+                grid: {
+                    color: '#e2e8f0'
+                } // Lighter grid lines
             },
             x: {
                 grid: {
                     display: false
-                }
+                },
+                ticks: {
+                    maxRotation: 0,
+                    autoSkipPadding: 10
+                } // Improve label readability
             }
         }
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "bg-white p-6 rounded-2xl shadow-lg",
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$react$2d$chartjs$2d$2$2f$dist$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Line"], {
-            options: chartOptions,
-            data: chartData
-        }, void 0, false, {
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "h-64",
+            children: [
+                " ",
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$react$2d$chartjs$2d$2$2f$dist$2f$index$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Line"], {
+                    options: chartOptions,
+                    data: chartData
+                }, void 0, false, {
+                    fileName: "[project]/aura-frontend/app/page.tsx",
+                    lineNumber: 383,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
             fileName: "[project]/aura-frontend/app/page.tsx",
-            lineNumber: 431,
+            lineNumber: 382,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/aura-frontend/app/page.tsx",
-        lineNumber: 430,
+        lineNumber: 381,
         columnNumber: 5
     }, this);
 }
@@ -899,12 +939,12 @@ function WeeklySummary({ history }) {
         const getTopItem = undefined;
     };
     const handleShowSummary = ()=>{
-        calculateSummary(); // Calculate summary when button is clicked
+        calculateSummary();
         setShowModal(true);
     };
-    const MoodStat = ({ mood, count, total })=>{
-        const percentage = total > 0 ? Math.round(count / total * 100) : 0;
-        const colors = {
+    const MoodStat = ({ m, c, t })=>{
+        const p = t > 0 ? Math.round(c / t * 100) : 0;
+        const cl = {
             POSITIVE: 'bg-green-500',
             NEGATIVE: 'bg-rose-500',
             NEUTRAL: 'bg-slate-500'
@@ -915,50 +955,50 @@ function WeeklySummary({ history }) {
                     className: "flex justify-between font-semibold text-sm",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                            children: mood.charAt(0).toUpperCase() + mood.slice(1).toLowerCase()
+                            children: m.charAt(0).toUpperCase() + m.slice(1).toLowerCase()
                         }, void 0, false, {
                             fileName: "[project]/aura-frontend/app/page.tsx",
-                            lineNumber: 498,
-                            columnNumber: 11
+                            lineNumber: 409,
+                            columnNumber: 269
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                             children: [
-                                percentage,
+                                p,
                                 "%"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/aura-frontend/app/page.tsx",
-                            lineNumber: 499,
-                            columnNumber: 11
+                            lineNumber: 409,
+                            columnNumber: 334
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/aura-frontend/app/page.tsx",
-                    lineNumber: 497,
-                    columnNumber: 9
+                    lineNumber: 409,
+                    columnNumber: 209
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "w-full bg-slate-200 rounded-full h-2.5 mt-1",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: `${colors[mood] || 'bg-gray-400'} h-2.5 rounded-full`,
+                        className: `${cl[m] || 'bg-gray-400'} h-2.5 rounded-full`,
                         style: {
-                            width: `${percentage}%`
+                            width: `${p}%`
                         }
                     }, void 0, false, {
                         fileName: "[project]/aura-frontend/app/page.tsx",
-                        lineNumber: 501,
-                        columnNumber: 70
+                        lineNumber: 409,
+                        columnNumber: 418
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/aura-frontend/app/page.tsx",
-                    lineNumber: 501,
-                    columnNumber: 9
+                    lineNumber: 409,
+                    columnNumber: 357
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/aura-frontend/app/page.tsx",
-            lineNumber: 496,
-            columnNumber: 7
+            lineNumber: 409,
+            columnNumber: 204
         }, this);
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -971,15 +1011,15 @@ function WeeklySummary({ history }) {
                         children: "Your Week"
                     }, void 0, false, {
                         fileName: "[project]/aura-frontend/app/page.tsx",
-                        lineNumber: 509,
+                        lineNumber: 414,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "text-slate-600 mb-4",
+                        className: "text-slate-600 mb-4 text-sm",
                         children: "Get a summary of your emotional trends and insights from the past 7 days."
                     }, void 0, false, {
                         fileName: "[project]/aura-frontend/app/page.tsx",
-                        lineNumber: 510,
+                        lineNumber: 415,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -988,13 +1028,13 @@ function WeeklySummary({ history }) {
                         children: "Generate My Weekly Summary"
                     }, void 0, false, {
                         fileName: "[project]/aura-frontend/app/page.tsx",
-                        lineNumber: 511,
+                        lineNumber: 416,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/aura-frontend/app/page.tsx",
-                lineNumber: 508,
+                lineNumber: 413,
                 columnNumber: 7
             }, this),
             showModal && summary && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1010,7 +1050,7 @@ function WeeklySummary({ history }) {
                                     children: "Your Week in Review"
                                 }, void 0, false, {
                                     fileName: "[project]/aura-frontend/app/page.tsx",
-                                    lineNumber: 516,
+                                    lineNumber: 421,
                                     columnNumber: 83
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1019,13 +1059,13 @@ function WeeklySummary({ history }) {
                                     children: "×"
                                 }, void 0, false, {
                                     fileName: "[project]/aura-frontend/app/page.tsx",
-                                    lineNumber: 516,
+                                    lineNumber: 421,
                                     columnNumber: 157
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/aura-frontend/app/page.tsx",
-                            lineNumber: 516,
+                            lineNumber: 421,
                             columnNumber: 13
                         }, this),
                         summary.totalEntries > 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1038,49 +1078,49 @@ function WeeklySummary({ history }) {
                                             children: "Mood Breakdown"
                                         }, void 0, false, {
                                             fileName: "[project]/aura-frontend/app/page.tsx",
-                                            lineNumber: 520,
-                                            columnNumber: 19
+                                            lineNumber: 424,
+                                            columnNumber: 22
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "space-y-3",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(MoodStat, {
-                                                    mood: "POSITIVE",
-                                                    count: summary.moods.POSITIVE,
-                                                    total: summary.totalEntries
+                                                    m: "POSITIVE",
+                                                    c: summary.moods.POSITIVE,
+                                                    t: summary.totalEntries
                                                 }, void 0, false, {
                                                     fileName: "[project]/aura-frontend/app/page.tsx",
-                                                    lineNumber: 521,
-                                                    columnNumber: 46
+                                                    lineNumber: 424,
+                                                    columnNumber: 107
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(MoodStat, {
-                                                    mood: "NEGATIVE",
-                                                    count: summary.moods.NEGATIVE,
-                                                    total: summary.totalEntries
+                                                    m: "NEGATIVE",
+                                                    c: summary.moods.NEGATIVE,
+                                                    t: summary.totalEntries
                                                 }, void 0, false, {
                                                     fileName: "[project]/aura-frontend/app/page.tsx",
-                                                    lineNumber: 521,
-                                                    columnNumber: 134
+                                                    lineNumber: 424,
+                                                    columnNumber: 184
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(MoodStat, {
-                                                    mood: "NEUTRAL",
-                                                    count: summary.moods.NEUTRAL,
-                                                    total: summary.totalEntries
+                                                    m: "NEUTRAL",
+                                                    c: summary.moods.NEUTRAL,
+                                                    t: summary.totalEntries
                                                 }, void 0, false, {
                                                     fileName: "[project]/aura-frontend/app/page.tsx",
-                                                    lineNumber: 521,
-                                                    columnNumber: 222
+                                                    lineNumber: 424,
+                                                    columnNumber: 261
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/aura-frontend/app/page.tsx",
-                                            lineNumber: 521,
-                                            columnNumber: 19
+                                            lineNumber: 424,
+                                            columnNumber: 80
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/aura-frontend/app/page.tsx",
-                                    lineNumber: 519,
+                                    lineNumber: 424,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1090,8 +1130,8 @@ function WeeklySummary({ history }) {
                                             children: "Key Insights"
                                         }, void 0, false, {
                                             fileName: "[project]/aura-frontend/app/page.tsx",
-                                            lineNumber: 524,
-                                            columnNumber: 19
+                                            lineNumber: 425,
+                                            columnNumber: 22
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "mt-2 space-y-2 text-slate-700",
@@ -1099,11 +1139,11 @@ function WeeklySummary({ history }) {
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                                            children: "Your most common feeling was:"
+                                                            children: "Most common feeling:"
                                                         }, void 0, false, {
                                                             fileName: "[project]/aura-frontend/app/page.tsx",
-                                                            lineNumber: 525,
-                                                            columnNumber: 69
+                                                            lineNumber: 425,
+                                                            columnNumber: 123
                                                         }, this),
                                                         " ",
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1111,23 +1151,23 @@ function WeeklySummary({ history }) {
                                                             children: summary.topEmotion
                                                         }, void 0, false, {
                                                             fileName: "[project]/aura-frontend/app/page.tsx",
-                                                            lineNumber: 525,
-                                                            columnNumber: 116
+                                                            lineNumber: 425,
+                                                            columnNumber: 161
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/aura-frontend/app/page.tsx",
-                                                    lineNumber: 525,
-                                                    columnNumber: 66
+                                                    lineNumber: 425,
+                                                    columnNumber: 120
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                                            children: "Activity most linked to positive days:"
+                                                            children: "Activity linked to positive days:"
                                                         }, void 0, false, {
                                                             fileName: "[project]/aura-frontend/app/page.tsx",
-                                                            lineNumber: 525,
-                                                            columnNumber: 198
+                                                            lineNumber: 425,
+                                                            columnNumber: 243
                                                         }, this),
                                                         " ",
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1135,38 +1175,38 @@ function WeeklySummary({ history }) {
                                                             children: summary.topActivity
                                                         }, void 0, false, {
                                                             fileName: "[project]/aura-frontend/app/page.tsx",
-                                                            lineNumber: 525,
-                                                            columnNumber: 254
+                                                            lineNumber: 425,
+                                                            columnNumber: 294
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/aura-frontend/app/page.tsx",
-                                                    lineNumber: 525,
-                                                    columnNumber: 195
+                                                    lineNumber: 425,
+                                                    columnNumber: 240
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/aura-frontend/app/page.tsx",
-                                            lineNumber: 525,
-                                            columnNumber: 19
+                                            lineNumber: 425,
+                                            columnNumber: 73
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/aura-frontend/app/page.tsx",
-                                    lineNumber: 523,
+                                    lineNumber: 425,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "bg-indigo-50 p-3 rounded-lg border border-indigo-200",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-indigo-800",
+                                        className: "text-indigo-800 text-sm",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
                                                 children: "Pro-Tip:"
                                             }, void 0, false, {
                                                 fileName: "[project]/aura-frontend/app/page.tsx",
-                                                lineNumber: 527,
-                                                columnNumber: 118
+                                                lineNumber: 426,
+                                                columnNumber: 126
                                             }, this),
                                             " To boost your mood next week, try focusing on activities like **",
                                             summary.topActivity,
@@ -1174,36 +1214,36 @@ function WeeklySummary({ history }) {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/aura-frontend/app/page.tsx",
-                                        lineNumber: 527,
+                                        lineNumber: 426,
                                         columnNumber: 87
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/aura-frontend/app/page.tsx",
-                                    lineNumber: 527,
+                                    lineNumber: 426,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/aura-frontend/app/page.tsx",
-                            lineNumber: 518,
+                            lineNumber: 423,
                             columnNumber: 15
                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                             className: "text-center text-slate-600 py-8",
-                            children: "Not enough data from the past week. Keep journaling to unlock your summary!"
+                            children: "Not enough data from the past week. Keep journaling!"
                         }, void 0, false, {
                             fileName: "[project]/aura-frontend/app/page.tsx",
-                            lineNumber: 529,
+                            lineNumber: 428,
                             columnNumber: 18
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/aura-frontend/app/page.tsx",
-                    lineNumber: 515,
+                    lineNumber: 420,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/aura-frontend/app/page.tsx",
-                lineNumber: 514,
+                lineNumber: 419,
                 columnNumber: 9
             }, this)
         ]
@@ -1213,43 +1253,43 @@ function WeeklySummary({ history }) {
 // JournalHistory Component
 // ---------------------------------
 function JournalHistory({ history }) {
-    const getSentimentStyle = (sentiment)=>{
-        switch(sentiment){
+    const getSentimentStyle = (s)=>{
+        switch(s){
             case 'POSITIVE':
                 return {
-                    icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$smile$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Smile$3e$__["Smile"], {
+                    i: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$smile$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Smile$3e$__["Smile"], {
                         size: 18,
                         className: "text-green-500"
                     }, void 0, false, {
                         fileName: "[project]/aura-frontend/app/page.tsx",
-                        lineNumber: 543,
-                        columnNumber: 39
+                        lineNumber: 441,
+                        columnNumber: 82
                     }, this),
-                    cardBorder: 'border-l-4 border-green-500'
+                    b: 'border-l-4 border-green-500'
                 };
             case 'NEGATIVE':
                 return {
-                    icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$frown$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Frown$3e$__["Frown"], {
+                    i: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$frown$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Frown$3e$__["Frown"], {
                         size: 18,
                         className: "text-rose-500"
                     }, void 0, false, {
                         fileName: "[project]/aura-frontend/app/page.tsx",
-                        lineNumber: 544,
-                        columnNumber: 39
+                        lineNumber: 441,
+                        columnNumber: 188
                     }, this),
-                    cardBorder: 'border-l-4 border-rose-500'
+                    b: 'border-l-4 border-rose-500'
                 };
             default:
                 return {
-                    icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$meh$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Meh$3e$__["Meh"], {
+                    i: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$meh$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Meh$3e$__["Meh"], {
                         size: 18,
                         className: "text-slate-500"
                     }, void 0, false, {
                         fileName: "[project]/aura-frontend/app/page.tsx",
-                        lineNumber: 545,
-                        columnNumber: 31
+                        lineNumber: 441,
+                        columnNumber: 284
                     }, this),
-                    cardBorder: 'border-l-4 border-slate-500'
+                    b: 'border-l-4 border-slate-500'
                 };
         }
     };
@@ -1262,8 +1302,8 @@ function JournalHistory({ history }) {
                     children: "Journal History"
                 }, void 0, false, {
                     fileName: "[project]/aura-frontend/app/page.tsx",
-                    lineNumber: 552,
-                    columnNumber: 9
+                    lineNumber: 442,
+                    columnNumber: 104
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "text-center p-4 bg-slate-100 rounded-lg",
@@ -1272,19 +1312,19 @@ function JournalHistory({ history }) {
                         children: "Your past journal entries will appear here."
                     }, void 0, false, {
                         fileName: "[project]/aura-frontend/app/page.tsx",
-                        lineNumber: 553,
-                        columnNumber: 66
+                        lineNumber: 442,
+                        columnNumber: 236
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/aura-frontend/app/page.tsx",
-                    lineNumber: 553,
-                    columnNumber: 9
+                    lineNumber: 442,
+                    columnNumber: 179
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/aura-frontend/app/page.tsx",
-            lineNumber: 551,
-            columnNumber: 7
+            lineNumber: 442,
+            columnNumber: 52
         }, this);
     }
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1295,13 +1335,13 @@ function JournalHistory({ history }) {
                 children: "Journal History"
             }, void 0, false, {
                 fileName: "[project]/aura-frontend/app/page.tsx",
-                lineNumber: 560,
-                columnNumber: 7
+                lineNumber: 443,
+                columnNumber: 64
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "space-y-4 max-h-96 overflow-y-auto pr-2",
                 children: history.map((entry)=>{
-                    const { icon, cardBorder } = getSentimentStyle(entry.sentiment);
+                    const { i: icon, b: cardBorder } = getSentimentStyle(entry.sentiment);
                     const entryDate = entry.date?.toDate();
                     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: `p-4 rounded-lg bg-slate-50 border ${cardBorder}`,
@@ -1316,8 +1356,8 @@ function JournalHistory({ history }) {
                                                 size: 14
                                             }, void 0, false, {
                                                 fileName: "[project]/aura-frontend/app/page.tsx",
-                                                lineNumber: 569,
-                                                columnNumber: 19
+                                                lineNumber: 443,
+                                                columnNumber: 552
                                             }, this),
                                             entryDate ? entryDate.toLocaleDateString('en-US', {
                                                 year: 'numeric',
@@ -1327,105 +1367,375 @@ function JournalHistory({ history }) {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/aura-frontend/app/page.tsx",
-                                        lineNumber: 568,
-                                        columnNumber: 17
+                                        lineNumber: 443,
+                                        columnNumber: 474
                                     }, this),
                                     icon
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/aura-frontend/app/page.tsx",
-                                lineNumber: 567,
-                                columnNumber: 15
+                                lineNumber: 443,
+                                columnNumber: 418
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "text-slate-700 mb-3",
+                                className: "text-slate-700 mb-3 text-sm",
                                 children: entry.originalText || /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("i", {
-                                    children: "(No text was saved for this entry)"
+                                    children: "(No text saved)"
                                 }, void 0, false, {
                                     fileName: "[project]/aura-frontend/app/page.tsx",
-                                    lineNumber: 574,
-                                    columnNumber: 73
+                                    lineNumber: 443,
+                                    columnNumber: 764
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/aura-frontend/app/page.tsx",
-                                lineNumber: 574,
-                                columnNumber: 15
+                                lineNumber: 443,
+                                columnNumber: 698
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "flex flex-wrap items-center gap-2",
                                 children: [
-                                    entry.labels && entry.labels.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "flex items-center gap-2",
+                                    entry.labels?.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex items-center gap-1.5",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$tag$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__TagIcon$3e$__["TagIcon"], {
                                                 size: 14,
                                                 className: "text-slate-500"
                                             }, void 0, false, {
                                                 fileName: "[project]/aura-frontend/app/page.tsx",
-                                                lineNumber: 578,
-                                                columnNumber: 21
+                                                lineNumber: 443,
+                                                columnNumber: 913
                                             }, this),
-                                            entry.labels.map((label)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(SmallTag, {
-                                                    text: label,
+                                            entry.labels.map((l)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(SmallTag, {
+                                                    text: l,
                                                     color: "bg-indigo-100 text-indigo-700"
-                                                }, label, false, {
+                                                }, l, false, {
                                                     fileName: "[project]/aura-frontend/app/page.tsx",
-                                                    lineNumber: 579,
-                                                    columnNumber: 48
+                                                    lineNumber: 443,
+                                                    columnNumber: 981
                                                 }, this))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/aura-frontend/app/page.tsx",
-                                        lineNumber: 577,
-                                        columnNumber: 19
+                                        lineNumber: 443,
+                                        columnNumber: 870
                                     }, this),
-                                    entry.activities && entry.activities.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "flex items-center gap-2",
+                                    entry.activities?.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex items-center gap-1.5",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$activity$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Activity$3e$__["Activity"], {
                                                 size: 14,
                                                 className: "text-slate-500"
                                             }, void 0, false, {
                                                 fileName: "[project]/aura-frontend/app/page.tsx",
-                                                lineNumber: 584,
-                                                columnNumber: 21
+                                                lineNumber: 443,
+                                                columnNumber: 1132
                                             }, this),
-                                            entry.activities.map((activity)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(SmallTag, {
-                                                    text: activity,
+                                            entry.activities.map((a)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(SmallTag, {
+                                                    text: a,
                                                     color: "bg-orange-100 text-orange-700"
-                                                }, activity, false, {
+                                                }, a, false, {
                                                     fileName: "[project]/aura-frontend/app/page.tsx",
-                                                    lineNumber: 585,
-                                                    columnNumber: 55
+                                                    lineNumber: 443,
+                                                    columnNumber: 1205
                                                 }, this))
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/aura-frontend/app/page.tsx",
-                                        lineNumber: 583,
-                                        columnNumber: 19
+                                        lineNumber: 443,
+                                        columnNumber: 1089
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/aura-frontend/app/page.tsx",
-                                lineNumber: 575,
-                                columnNumber: 15
+                                lineNumber: 443,
+                                columnNumber: 791
                             }, this)
                         ]
                     }, entry.id, true, {
                         fileName: "[project]/aura-frontend/app/page.tsx",
-                        lineNumber: 566,
-                        columnNumber: 13
+                        lineNumber: 443,
+                        columnNumber: 336
                     }, this);
                 })
             }, void 0, false, {
                 fileName: "[project]/aura-frontend/app/page.tsx",
-                lineNumber: 561,
+                lineNumber: 443,
+                columnNumber: 139
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/aura-frontend/app/page.tsx",
+        lineNumber: 443,
+        columnNumber: 12
+    }, this);
+}
+// ---------------------------------
+// CounselorList Component
+// ---------------------------------
+function CounselorList() {
+    const [counselors, setCounselors] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([]);
+    const [isLoading, setIsLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(true);
+    const [error, setError] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        const q = (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$node$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["query"])((0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$node$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["collection"])(__TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$app$2f$firebaseConfig$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["db"], 'counselors'), (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$node$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["where"])("isActive", "==", true));
+        const unsub = (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$node$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["onSnapshot"])(q, (snap)=>{
+            const list = snap.docs.map((doc)=>({
+                    id: doc.id,
+                    ...doc.data()
+                }));
+            setCounselors(list);
+            setIsLoading(false);
+            setError(null);
+        }, (err)=>{
+            console.error("Err fetch counselors:", err);
+            setError("Could not load counselors.");
+            setIsLoading(false);
+        });
+        return ()=>unsub();
+    }, []);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "bg-white p-6 rounded-2xl shadow-lg",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                className: "text-2xl font-bold text-slate-800 mb-1",
+                children: "Find Support"
+            }, void 0, false, {
+                fileName: "[project]/aura-frontend/app/page.tsx",
+                lineNumber: 452,
+                columnNumber: 64
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                className: "text-slate-600 mb-4 text-sm",
+                children: "Connect with licensed professionals. This is a directory, not an endorsement."
+            }, void 0, false, {
+                fileName: "[project]/aura-frontend/app/page.tsx",
+                lineNumber: 452,
+                columnNumber: 136
+            }, this),
+            " ",
+            isLoading && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "flex justify-center py-10",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$loader$2d$circle$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Loader2$3e$__["Loader2"], {
+                    size: 32,
+                    className: "text-indigo-600 animate-spin"
+                }, void 0, false, {
+                    fileName: "[project]/aura-frontend/app/page.tsx",
+                    lineNumber: 452,
+                    columnNumber: 319
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/aura-frontend/app/page.tsx",
+                lineNumber: 452,
+                columnNumber: 276
+            }, this),
+            " ",
+            error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "text-center py-10 px-4 bg-rose-50 border border-rose-200 rounded-lg",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        className: "text-rose-700 font-semibold",
+                        children: "Error"
+                    }, void 0, false, {
+                        fileName: "[project]/aura-frontend/app/page.tsx",
+                        lineNumber: 452,
+                        columnNumber: 485
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        className: "text-rose-600 text-sm mt-1",
+                        children: error
+                    }, void 0, false, {
+                        fileName: "[project]/aura-frontend/app/page.tsx",
+                        lineNumber: 452,
+                        columnNumber: 537
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/aura-frontend/app/page.tsx",
+                lineNumber: 452,
+                columnNumber: 400
+            }, this),
+            " ",
+            !isLoading && !error && counselors.length === 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "text-center py-10 px-4 bg-slate-50 border border-slate-200 rounded-lg",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                    className: "text-slate-600",
+                    children: "No counselors listed."
+                }, void 0, false, {
+                    fileName: "[project]/aura-frontend/app/page.tsx",
+                    lineNumber: 452,
+                    columnNumber: 739
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/aura-frontend/app/page.tsx",
+                lineNumber: 452,
+                columnNumber: 652
+            }, this),
+            " ",
+            !isLoading && !error && counselors.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "space-y-4",
+                children: counselors.map((c)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(CounselorCard, {
+                        counselor: c
+                    }, c.id, false, {
+                        fileName: "[project]/aura-frontend/app/page.tsx",
+                        lineNumber: 452,
+                        columnNumber: 902
+                    }, this))
+            }, void 0, false, {
+                fileName: "[project]/aura-frontend/app/page.tsx",
+                lineNumber: 452,
+                columnNumber: 854
+            }, this),
+            " ",
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "mt-6 pt-4 border-t border-slate-200 text-center",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                        className: "text-md font-semibold text-rose-700 mb-2",
+                        children: "Need Immediate Help?"
+                    }, void 0, false, {
+                        fileName: "[project]/aura-frontend/app/page.tsx",
+                        lineNumber: 452,
+                        columnNumber: 1020
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        className: "text-sm text-slate-600",
+                        children: [
+                            "If you are in crisis, please reach out. ",
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                href: "https://findahelpline.com/",
+                                target: "_blank",
+                                rel: "noopener noreferrer",
+                                className: "text-indigo-600 hover:underline ml-1",
+                                children: "Find Crisis Resources"
+                            }, void 0, false, {
+                                fileName: "[project]/aura-frontend/app/page.tsx",
+                                lineNumber: 452,
+                                columnNumber: 1180
+                            }, this),
+                            "."
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/aura-frontend/app/page.tsx",
+                        lineNumber: 452,
+                        columnNumber: 1102
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/aura-frontend/app/page.tsx",
+                lineNumber: 452,
+                columnNumber: 955
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/aura-frontend/app/page.tsx",
+        lineNumber: 452,
+        columnNumber: 12
+    }, this);
+}
+// ---------------------------------
+// CounselorCard Component
+// ---------------------------------
+function CounselorCard({ counselor }) {
+    // Fallback image function
+    const handleImageError = (e)=>{
+        e.currentTarget.onerror = null; // Prevent infinite loop
+        e.currentTarget.src = 'https://placehold.co/100x100/E2E8F0/475569?text=Counselor';
+    };
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "flex flex-col sm:flex-row items-start gap-4 p-4 rounded-lg bg-slate-50 border border-slate-200 hover:shadow-md transition-shadow",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                src: counselor.imageUrl || 'https://placehold.co/100x100/E2E8F0/475569?text=Counselor',
+                alt: `Photo of ${counselor.name}`,
+                className: "w-24 h-24 rounded-full object-cover flex-shrink-0 border-2 border-white shadow-sm mx-auto sm:mx-0",
+                onError: handleImageError
+            }, void 0, false, {
+                fileName: "[project]/aura-frontend/app/page.tsx",
+                lineNumber: 467,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "flex-1 text-center sm:text-left",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                        className: "text-lg font-bold text-slate-800",
+                        children: counselor.name
+                    }, void 0, false, {
+                        fileName: "[project]/aura-frontend/app/page.tsx",
+                        lineNumber: 474,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        className: "text-sm font-medium text-indigo-600 mb-1",
+                        children: counselor.title
+                    }, void 0, false, {
+                        fileName: "[project]/aura-frontend/app/page.tsx",
+                        lineNumber: 475,
+                        columnNumber: 9
+                    }, this),
+                    counselor.specializations?.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex flex-wrap items-center justify-center sm:justify-start gap-1.5 mb-2",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$tag$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__TagIcon$3e$__["TagIcon"], {
+                                size: 14,
+                                className: "text-slate-500"
+                            }, void 0, false, {
+                                fileName: "[project]/aura-frontend/app/page.tsx",
+                                lineNumber: 478,
+                                columnNumber: 13
+                            }, this),
+                            counselor.specializations.map((s)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(SmallTag, {
+                                    text: s,
+                                    color: "bg-indigo-100 text-indigo-700"
+                                }, s, false, {
+                                    fileName: "[project]/aura-frontend/app/page.tsx",
+                                    lineNumber: 479,
+                                    columnNumber: 49
+                                }, this))
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/aura-frontend/app/page.tsx",
+                        lineNumber: 477,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        className: "text-sm text-slate-600 mb-3 line-clamp-3",
+                        children: counselor.bio
+                    }, void 0, false, {
+                        fileName: "[project]/aura-frontend/app/page.tsx",
+                        lineNumber: 482,
+                        columnNumber: 9
+                    }, this),
+                    counselor.website && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                        href: counselor.website,
+                        target: "_blank",
+                        rel: "noopener noreferrer",
+                        className: "inline-flex items-center gap-1 text-sm font-medium text-indigo-600 hover:text-indigo-800 hover:underline",
+                        children: [
+                            "Visit Website ",
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$external$2d$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ExternalLink$3e$__["ExternalLink"], {
+                                size: 14
+                            }, void 0, false, {
+                                fileName: "[project]/aura-frontend/app/page.tsx",
+                                lineNumber: 485,
+                                columnNumber: 27
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/aura-frontend/app/page.tsx",
+                        lineNumber: 484,
+                        columnNumber: 11
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/aura-frontend/app/page.tsx",
+                lineNumber: 473,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/aura-frontend/app/page.tsx",
-        lineNumber: 559,
+        lineNumber: 466,
         columnNumber: 5
     }, this);
 }
@@ -1443,8 +1753,8 @@ function TabButton({ icon, label, isActive, onClick }) {
         ]
     }, void 0, true, {
         fileName: "[project]/aura-frontend/app/page.tsx",
-        lineNumber: 602,
-        columnNumber: 5
+        lineNumber: 498,
+        columnNumber: 12
     }, this);
 }
 function Tag({ label, type }) {
@@ -1476,7 +1786,7 @@ function Tag({ label, type }) {
         ]
     }, void 0, true, {
         fileName: "[project]/aura-frontend/app/page.tsx",
-        lineNumber: 621,
+        lineNumber: 504,
         columnNumber: 10
     }, this);
 }
@@ -1485,7 +1795,7 @@ const SmallTag = ({ text, color })=>/*#__PURE__*/ (0, __TURBOPACK__imported__mod
         children: text
     }, void 0, false, {
         fileName: "[project]/aura-frontend/app/page.tsx",
-        lineNumber: 624,
+        lineNumber: 507,
         columnNumber: 73
     }, ("TURBOPACK compile-time value", void 0));
 function InsightCard({ analysis }) {
@@ -1502,30 +1812,30 @@ function InsightCard({ analysis }) {
                 ]
             }, void 0, true, {
                 fileName: "[project]/aura-frontend/app/page.tsx",
-                lineNumber: 630,
-                columnNumber: 7
+                lineNumber: 511,
+                columnNumber: 87
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                className: "text-indigo-700 mt-2",
+                className: "text-indigo-700 mt-2 text-sm",
                 children: strategy.text
             }, void 0, false, {
                 fileName: "[project]/aura-frontend/app/page.tsx",
-                lineNumber: 631,
-                columnNumber: 7
+                lineNumber: 511,
+                columnNumber: 193
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/aura-frontend/app/page.tsx",
-        lineNumber: 629,
-        columnNumber: 5
+        lineNumber: 511,
+        columnNumber: 12
     }, this);
 }
 function CorrelationCard({ analysis }) {
     if (!analysis.activities || analysis.activities.length === 0) return null;
     let insightText = null;
-    if (analysis.sentiment === 'POSITIVE' && analysis.activities.includes('Exercise')) insightText = "Great job on exercising! It seems to have a positive impact on your mood.";
-    else if (analysis.sentiment === 'POSITIVE' && analysis.activities.includes('Social')) insightText = "Connecting with others is powerful. It looks like it boosted your spirits today!";
-    else if (analysis.labels.includes('Fatigue') && analysis.activities.includes('Work')) insightText = "We noticed you logged 'Work' and are feeling fatigued. Remember to take regular breaks to recharge.";
+    if (analysis.sentiment === 'POSITIVE' && analysis.activities.includes('Exercise')) insightText = "Exercising seems to positively impact your mood.";
+    else if (analysis.sentiment === 'POSITIVE' && analysis.activities.includes('Social')) insightText = "Connecting with others boosted your spirits!";
+    else if (analysis.labels.includes('Fatigue') && analysis.activities.includes('Work')) insightText = "Work logged & feeling fatigued. Remember to take breaks.";
     if (!insightText) return null;
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "mt-4 bg-green-50 border border-green-200 rounded-lg p-4",
@@ -1535,22 +1845,22 @@ function CorrelationCard({ analysis }) {
                 children: "📈 Correlation Insight"
             }, void 0, false, {
                 fileName: "[project]/aura-frontend/app/page.tsx",
-                lineNumber: 645,
-                columnNumber: 7
+                lineNumber: 516,
+                columnNumber: 85
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                className: "text-green-700 mt-2",
+                className: "text-green-700 mt-2 text-sm",
                 children: insightText
             }, void 0, false, {
                 fileName: "[project]/aura-frontend/app/page.tsx",
-                lineNumber: 646,
-                columnNumber: 7
+                lineNumber: 516,
+                columnNumber: 179
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/aura-frontend/app/page.tsx",
-        lineNumber: 644,
-        columnNumber: 5
+        lineNumber: 516,
+        columnNumber: 12
     }, this);
 }
 function AppWrapper() {
@@ -1563,87 +1873,79 @@ function AppWrapper() {
                 className: "text-indigo-600 animate-spin"
             }, void 0, false, {
                 fileName: "[project]/aura-frontend/app/page.tsx",
-                lineNumber: 661,
-                columnNumber: 9
+                lineNumber: 524,
+                columnNumber: 102
             }, this)
         }, void 0, false, {
             fileName: "[project]/aura-frontend/app/page.tsx",
-            lineNumber: 660,
-            columnNumber: 7
+            lineNumber: 524,
+            columnNumber: 27
         }, this);
     }
     if (!user) {
         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(LoginScreen, {}, void 0, false, {
             fileName: "[project]/aura-frontend/app/page.tsx",
-            lineNumber: 667,
-            columnNumber: 12
+            lineNumber: 525,
+            columnNumber: 23
         }, this);
     }
-    // If the user is logged in, show the main homepage
+    // User is loaded and logged in, show the main app
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(HomePage, {
         user: user
     }, void 0, false, {
         fileName: "[project]/aura-frontend/app/page.tsx",
-        lineNumber: 671,
+        lineNumber: 527,
         columnNumber: 10
     }, this);
 }
 // ==================================================================
-// HOME PAGE (The main app)
+// HOME PAGE (The main app logic and layout)
 // ==================================================================
 function HomePage({ user }) {
     // --- State Variables ---
     const [journalText, setJournalText] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
     const [selectedActivities, setSelectedActivities] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([]);
-    const [isLoading, setIsLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [isLoadingAnalysis, setIsLoadingAnalysis] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
     const [analysis, setAnalysis] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(null);
     const [error, setError] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('');
     const [showBreathingExercise, setShowBreathingExercise] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
     const [streak, setStreak] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(0);
     const [view, setView] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])('journal');
     const [journalHistory, setJournalHistory] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])([]);
-    const [habits, setHabits] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(initialHabits); // Initialize with default
-    // --- Data Loading Effect ---
+    const [habits, setHabits] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(initialHabits);
+    // --- Data Loading Effect (Firestore Listeners) ---
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
         if (!user) return;
-        // --- Profile Listener (Streak & Habits) ---
+        // --- Profile Listener ---
         const profileDocRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$node$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["doc"])(__TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$app$2f$firebaseConfig$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["db"], 'users', user.uid);
         const unsubscribeProfile = (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$node$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["onSnapshot"])(profileDocRef, (docSnap)=>{
             if (docSnap.exists()) {
                 const data = docSnap.data();
-                // Streak logic
                 const streakData = data.streakData || {
                     streakCount: 0,
                     lastJournalDate: null
                 };
                 const today = getISODate(new Date());
                 const yesterday = getISODate(new Date(Date.now() - 86400000));
-                if (streakData.lastJournalDate === today || streakData.lastJournalDate === yesterday) {
-                    setStreak(streakData.streakCount);
-                } else if (streakData.lastJournalDate) {
-                    setStreak(0); // Streak is broken
-                } else {
-                    setStreak(0); // Ensure streak is 0 if no data
-                }
-                // Habits logic - use default if none exist in DB
+                if (streakData.lastJournalDate === today || streakData.lastJournalDate === yesterday) setStreak(streakData.streakCount);
+                else if (streakData.lastJournalDate) setStreak(0);
+                else setStreak(0);
                 setHabits(data.habits || initialHabits);
             } else {
-                // Create a new user profile document if it doesn't exist
                 (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$node$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["setDoc"])(profileDocRef, {
-                    email: user.email || 'guest',
+                    email: user.email || `guest_${user.uid.substring(0, 6)}`,
                     streakData: {
                         streakCount: 0,
                         lastJournalDate: null
                     },
                     habits: initialHabits
                 });
-                setHabits(initialHabits); // Set initial habits locally too
-                setStreak(0); // Ensure streak is 0 for new users
+                setHabits(initialHabits);
+                setStreak(0);
             }
         }, (error)=>{
-            console.error("Error fetching user profile:", error);
-            // Handle error appropriately, maybe show a message to the user
-            setError("Could not load your profile data.");
+            console.error("Error fetching profile:", error);
+            setError("Could not load profile.");
         });
         // --- Journal History Listener ---
         const journalsColRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$node$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["collection"])(__TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$app$2f$firebaseConfig$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["db"], 'users', user.uid, 'journals');
@@ -1655,33 +1957,33 @@ function HomePage({ user }) {
                 }));
             setJournalHistory(history);
         }, (error)=>{
-            console.error("Error fetching journal history:", error);
-            setError("Could not load your journal history.");
+            console.error("Error fetching journals:", error);
+            setError("Could not load journal history.");
         });
         return ()=>{
             unsubscribeProfile();
             unsubscribeJournals();
-        };
+        }; // Cleanup
     }, [
         user
     ]);
     // --- Handlers ---
     const handleAnalyze = async ()=>{
         if (!user || !journalText.trim()) {
-            setError('Please write something in your journal first.');
+            setError('Please write something first.');
             return;
         }
-        setIsLoading(true);
+        setIsLoadingAnalysis(true);
         setError('');
         setAnalysis(null);
         try {
-            const response = await __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].post('http://127.0.0.1:8000/analyze', {
+            const backendUrl = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8000/analyze';
+            const response = await __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].post(backendUrl, {
                 text: journalText,
                 activities: selectedActivities
             });
             if (response.data.error) throw new Error(response.data.error);
             setAnalysis(response.data);
-            // Save new journal entry to Firestore
             const newEntry = {
                 date: (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$node$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["serverTimestamp"])(),
                 sentiment: response.data.sentiment,
@@ -1690,17 +1992,15 @@ function HomePage({ user }) {
                 originalText: journalText
             };
             await (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$node$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["addDoc"])((0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$node$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["collection"])(__TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$app$2f$firebaseConfig$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["db"], 'users', user.uid, 'journals'), newEntry);
-            // Update streak in Firestore
             const profileDocRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$node$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["doc"])(__TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$app$2f$firebaseConfig$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["db"], 'users', user.uid);
             const profileDoc = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$node$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["getDoc"])(profileDocRef);
-            // Use profileDoc.data() directly, ensuring it exists after creation
             const streakData = profileDoc.exists() ? profileDoc.data().streakData : {
                 streakCount: 0,
                 lastJournalDate: null
             };
             const today = getISODate(new Date());
             const yesterday = getISODate(new Date(Date.now() - 86400000));
-            let newStreakCount = streakData?.streakCount || 0; // Default to 0 if streakData is null/undefined
+            let newStreakCount = streakData?.streakCount || 0;
             if (streakData?.lastJournalDate === today) {} else if (streakData?.lastJournalDate === yesterday) newStreakCount += 1;
             else newStreakCount = 1;
             await (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$node$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["setDoc"])(profileDocRef, {
@@ -1711,14 +2011,13 @@ function HomePage({ user }) {
             }, {
                 merge: true
             });
-            // Clear the form
             setJournalText('');
             setSelectedActivities([]);
         } catch (err) {
             console.error(err);
-            setError('Sorry, we couldn\'t analyze your entry. The AI server might be busy or offline.');
+            setError(`Analysis failed: ${err.message || 'Server error'}`);
         } finally{
-            setIsLoading(false);
+            setIsLoadingAnalysis(false);
         }
     };
     const handleHabitUpdate = async (id)=>{
@@ -1726,39 +2025,33 @@ function HomePage({ user }) {
                 ...h,
                 progress: h.progress + 1
             } : h);
-        setHabits(updatedHabits); // Optimistic update
+        setHabits(updatedHabits);
         try {
-            const profileDocRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$node$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["doc"])(__TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$app$2f$firebaseConfig$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["db"], 'users', user.uid);
-            await (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$node$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["setDoc"])(profileDocRef, {
+            await (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$node$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["setDoc"])((0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$node$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["doc"])(__TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$app$2f$firebaseConfig$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["db"], 'users', user.uid), {
                 habits: updatedHabits
             }, {
                 merge: true
             });
         } catch (error) {
-            console.error("Error updating habits:", error);
-            setError("Could not save habit progress.");
-        // Optional: Revert local state if save fails
-        // setHabits(habits);
+            console.error("Err saving habit:", error);
+            setError("Failed to save habit.");
         }
     };
     const handleHabitReset = async ()=>{
-        const resetHabits = habits.map((h)=>({
+        const resetHabits = initialHabits.map((h)=>({
                 ...h,
                 progress: 0
             }));
-        setHabits(resetHabits); // Optimistic update
+        setHabits(resetHabits);
         try {
-            const profileDocRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$node$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["doc"])(__TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$app$2f$firebaseConfig$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["db"], 'users', user.uid);
-            await (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$node$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["setDoc"])(profileDocRef, {
+            await (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$node$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["setDoc"])((0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$node$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["doc"])(__TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$app$2f$firebaseConfig$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["db"], 'users', user.uid), {
                 habits: resetHabits
             }, {
                 merge: true
             });
         } catch (error) {
-            console.error("Error resetting habits:", error);
-            setError("Could not reset habit progress.");
-        // Optional: Revert local state if save fails
-        // setHabits(habits);
+            console.error("Err resetting habits:", error);
+            setError("Failed to reset habits.");
         }
     };
     // --- Render JSX ---
@@ -1768,23 +2061,23 @@ function HomePage({ user }) {
                 onClose: ()=>setShowBreathingExercise(false)
             }, void 0, false, {
                 fileName: "[project]/aura-frontend/app/page.tsx",
-                lineNumber: 830,
+                lineNumber: 621,
                 columnNumber: 33
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
                 className: "flex min-h-screen flex-col items-center bg-slate-50 font-sans",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
-                        className: "w-full max-w-2xl px-4 pt-6",
+                        className: "w-full max-w-3xl px-4 pt-6 sticky top-0 z-20 bg-slate-50/80 backdrop-blur-sm",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "flex justify-between items-center",
+                            className: "flex justify-between items-center pb-2 border-b border-slate-200",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
                                     className: "text-3xl font-bold text-indigo-800",
                                     children: "Aura"
                                 }, void 0, false, {
                                     fileName: "[project]/aura-frontend/app/page.tsx",
-                                    lineNumber: 834,
+                                    lineNumber: 626,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1794,7 +2087,7 @@ function HomePage({ user }) {
                                             streak: streak
                                         }, void 0, false, {
                                             fileName: "[project]/aura-frontend/app/page.tsx",
-                                            lineNumber: 836,
+                                            lineNumber: 628,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -1806,83 +2099,110 @@ function HomePage({ user }) {
                                                 className: "text-slate-600"
                                             }, void 0, false, {
                                                 fileName: "[project]/aura-frontend/app/page.tsx",
-                                                lineNumber: 838,
-                                                columnNumber: 17
+                                                lineNumber: 629,
+                                                columnNumber: 118
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/aura-frontend/app/page.tsx",
-                                            lineNumber: 837,
+                                            lineNumber: 629,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/aura-frontend/app/page.tsx",
-                                    lineNumber: 835,
+                                    lineNumber: 627,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/aura-frontend/app/page.tsx",
-                            lineNumber: 833,
+                            lineNumber: 625,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/aura-frontend/app/page.tsx",
-                        lineNumber: 832,
+                        lineNumber: 624,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
-                        className: "w-full max-w-2xl p-4 sticky top-0 z-10 bg-slate-50",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "flex justify-center space-x-2 rounded-lg bg-slate-200 p-1.5",
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(TabButton, {
-                                    icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$book$2d$open$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__BookOpen$3e$__["BookOpen"], {
-                                        size: 18
+                        className: "w-full max-w-3xl p-4 sticky top-[73px] z-10 bg-slate-50/80 backdrop-blur-sm",
+                        children: [
+                            " ",
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex justify-center space-x-2 rounded-lg bg-slate-200 p-1.5 shadow-sm",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(TabButton, {
+                                        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$book$2d$open$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__BookOpen$3e$__["BookOpen"], {
+                                            size: 18
+                                        }, void 0, false, {
+                                            fileName: "[project]/aura-frontend/app/page.tsx",
+                                            lineNumber: 637,
+                                            columnNumber: 30
+                                        }, void 0),
+                                        label: "Journal",
+                                        isActive: view === 'journal',
+                                        onClick: ()=>setView('journal')
                                     }, void 0, false, {
                                         fileName: "[project]/aura-frontend/app/page.tsx",
-                                        lineNumber: 846,
-                                        columnNumber: 30
-                                    }, void 0),
-                                    label: "Journal",
-                                    isActive: view === 'journal',
-                                    onClick: ()=>setView('journal')
-                                }, void 0, false, {
-                                    fileName: "[project]/aura-frontend/app/page.tsx",
-                                    lineNumber: 846,
-                                    columnNumber: 13
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(TabButton, {
-                                    icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$layout$2d$dashboard$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__LayoutDashboard$3e$__["LayoutDashboard"], {
-                                        size: 18
+                                        lineNumber: 637,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(TabButton, {
+                                        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$layout$2d$dashboard$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__LayoutDashboard$3e$__["LayoutDashboard"], {
+                                            size: 18
+                                        }, void 0, false, {
+                                            fileName: "[project]/aura-frontend/app/page.tsx",
+                                            lineNumber: 638,
+                                            columnNumber: 30
+                                        }, void 0),
+                                        label: "Dashboard",
+                                        isActive: view === 'dashboard',
+                                        onClick: ()=>setView('dashboard')
                                     }, void 0, false, {
                                         fileName: "[project]/aura-frontend/app/page.tsx",
-                                        lineNumber: 847,
-                                        columnNumber: 30
-                                    }, void 0),
-                                    label: "Dashboard",
-                                    isActive: view === 'dashboard',
-                                    onClick: ()=>setView('dashboard')
-                                }, void 0, false, {
-                                    fileName: "[project]/aura-frontend/app/page.tsx",
-                                    lineNumber: 847,
-                                    columnNumber: 13
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/aura-frontend/app/page.tsx",
-                            lineNumber: 845,
-                            columnNumber: 11
-                        }, this)
-                    }, void 0, false, {
+                                        lineNumber: 638,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(TabButton, {
+                                        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$users$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Users$3e$__["Users"], {
+                                            size: 18
+                                        }, void 0, false, {
+                                            fileName: "[project]/aura-frontend/app/page.tsx",
+                                            lineNumber: 639,
+                                            columnNumber: 30
+                                        }, void 0),
+                                        label: "Find Support",
+                                        isActive: view === 'support',
+                                        onClick: ()=>setView('support')
+                                    }, void 0, false, {
+                                        fileName: "[project]/aura-frontend/app/page.tsx",
+                                        lineNumber: 639,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/aura-frontend/app/page.tsx",
+                                lineNumber: 636,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
                         fileName: "[project]/aura-frontend/app/page.tsx",
-                        lineNumber: 844,
+                        lineNumber: 635,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "w-full max-w-2xl p-4 pb-20",
+                        className: "w-full max-w-3xl p-4 pb-20",
                         children: [
-                            " ",
+                            error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "mb-4 p-4 text-sm text-red-700 bg-red-100 rounded-lg shadow-md",
+                                role: "alert",
+                                children: error
+                            }, void 0, false, {
+                                fileName: "[project]/aura-frontend/app/page.tsx",
+                                lineNumber: 645,
+                                columnNumber: 21
+                            }, this),
                             view === 'journal' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "animate-fade-in space-y-6",
                                 children: [
@@ -1894,10 +2214,10 @@ function HomePage({ user }) {
                                                 onChange: (e)=>setJournalText(e.target.value),
                                                 placeholder: "How are you feeling today?",
                                                 className: "w-full h-40 p-3 border-slate-200 border rounded-xl focus:ring-2 focus:ring-indigo-500 focus:outline-none",
-                                                disabled: isLoading
+                                                disabled: isLoadingAnalysis
                                             }, void 0, false, {
                                                 fileName: "[project]/aura-frontend/app/page.tsx",
-                                                lineNumber: 856,
+                                                lineNumber: 651,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1908,8 +2228,8 @@ function HomePage({ user }) {
                                                         children: "What did you do today?"
                                                     }, void 0, false, {
                                                         fileName: "[project]/aura-frontend/app/page.tsx",
-                                                        lineNumber: 858,
-                                                        columnNumber: 19
+                                                        lineNumber: 652,
+                                                        columnNumber: 39
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "flex flex-wrap gap-2",
@@ -1922,53 +2242,48 @@ function HomePage({ user }) {
                                                                 children: activity
                                                             }, activity, false, {
                                                                 fileName: "[project]/aura-frontend/app/page.tsx",
-                                                                lineNumber: 860,
-                                                                columnNumber: 53
+                                                                lineNumber: 652,
+                                                                columnNumber: 194
                                                             }, this))
                                                     }, void 0, false, {
                                                         fileName: "[project]/aura-frontend/app/page.tsx",
-                                                        lineNumber: 859,
-                                                        columnNumber: 19
+                                                        lineNumber: 652,
+                                                        columnNumber: 124
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/aura-frontend/app/page.tsx",
-                                                lineNumber: 857,
+                                                lineNumber: 652,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                                 onClick: handleAnalyze,
-                                                disabled: isLoading,
+                                                disabled: isLoadingAnalysis,
                                                 className: "w-full mt-6 bg-indigo-600 text-white font-bold py-3 px-4 rounded-xl hover:bg-indigo-700 disabled:bg-slate-400 disabled:cursor-not-allowed shadow-md flex items-center justify-center",
                                                 children: [
-                                                    isLoading && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$loader$2d$circle$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Loader2$3e$__["Loader2"], {
+                                                    " ",
+                                                    isLoadingAnalysis && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$loader$2d$circle$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Loader2$3e$__["Loader2"], {
                                                         size: 20,
                                                         className: "mr-2 animate-spin"
                                                     }, void 0, false, {
                                                         fileName: "[project]/aura-frontend/app/page.tsx",
-                                                        lineNumber: 864,
-                                                        columnNumber: 33
+                                                        lineNumber: 653,
+                                                        columnNumber: 294
                                                     }, this),
-                                                    isLoading ? 'Analyzing...' : 'Analyze My Feelings'
+                                                    " ",
+                                                    isLoadingAnalysis ? 'Analyzing...' : 'Analyze & Save Journal',
+                                                    " "
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/aura-frontend/app/page.tsx",
-                                                lineNumber: 863,
+                                                lineNumber: 653,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/aura-frontend/app/page.tsx",
-                                        lineNumber: 855,
+                                        lineNumber: 650,
                                         columnNumber: 15
-                                    }, this),
-                                    error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-rose-500 text-center mt-4",
-                                        children: error
-                                    }, void 0, false, {
-                                        fileName: "[project]/aura-frontend/app/page.tsx",
-                                        lineNumber: 868,
-                                        columnNumber: 25
                                     }, this),
                                     analysis && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "bg-white p-6 rounded-2xl shadow-lg animate-fade-in",
@@ -1978,8 +2293,8 @@ function HomePage({ user }) {
                                                 children: "Your Analysis"
                                             }, void 0, false, {
                                                 fileName: "[project]/aura-frontend/app/page.tsx",
-                                                lineNumber: 871,
-                                                columnNumber: 19
+                                                lineNumber: 655,
+                                                columnNumber: 98
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "flex flex-wrap gap-2",
@@ -1989,64 +2304,65 @@ function HomePage({ user }) {
                                                         type: "sentiment"
                                                     }, void 0, false, {
                                                         fileName: "[project]/aura-frontend/app/page.tsx",
-                                                        lineNumber: 872,
-                                                        columnNumber: 57
+                                                        lineNumber: 655,
+                                                        columnNumber: 209
                                                     }, this),
-                                                    analysis.labels.map((label)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Tag, {
-                                                            label: label,
+                                                    analysis.labels.map((l)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Tag, {
+                                                            label: l,
                                                             type: "label"
-                                                        }, label, false, {
+                                                        }, l, false, {
                                                             fileName: "[project]/aura-frontend/app/page.tsx",
-                                                            lineNumber: 872,
-                                                            columnNumber: 138
+                                                            lineNumber: 655,
+                                                            columnNumber: 283
                                                         }, this)),
-                                                    analysis.activities.map((activity)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Tag, {
-                                                            label: activity,
+                                                    analysis.activities.map((a)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(Tag, {
+                                                            label: a,
                                                             type: "activity"
-                                                        }, activity, false, {
+                                                        }, a, false, {
                                                             fileName: "[project]/aura-frontend/app/page.tsx",
-                                                            lineNumber: 872,
-                                                            columnNumber: 223
+                                                            lineNumber: 655,
+                                                            columnNumber: 350
                                                         }, this))
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/aura-frontend/app/page.tsx",
-                                                lineNumber: 872,
-                                                columnNumber: 19
+                                                lineNumber: 655,
+                                                columnNumber: 171
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(InsightCard, {
                                                 analysis: analysis
                                             }, void 0, false, {
                                                 fileName: "[project]/aura-frontend/app/page.tsx",
-                                                lineNumber: 873,
-                                                columnNumber: 19
+                                                lineNumber: 655,
+                                                columnNumber: 398
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(CorrelationCard, {
                                                 analysis: analysis
                                             }, void 0, false, {
                                                 fileName: "[project]/aura-frontend/app/page.tsx",
-                                                lineNumber: 873,
-                                                columnNumber: 54
+                                                lineNumber: 655,
+                                                columnNumber: 432
                                             }, this),
+                                            " ",
                                             analysis.labels.includes("Anxiety") && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                                 onClick: ()=>setShowBreathingExercise(true),
                                                 className: "w-full mt-4 bg-violet-600 text-white font-bold py-2 px-4 rounded-xl hover:bg-violet-700",
-                                                children: "Try a Guided Breathing Exercise"
+                                                children: "Try Guided Breathing"
                                             }, void 0, false, {
                                                 fileName: "[project]/aura-frontend/app/page.tsx",
-                                                lineNumber: 874,
-                                                columnNumber: 59
+                                                lineNumber: 655,
+                                                columnNumber: 511
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/aura-frontend/app/page.tsx",
-                                        lineNumber: 870,
-                                        columnNumber: 17
+                                        lineNumber: 655,
+                                        columnNumber: 30
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/aura-frontend/app/page.tsx",
-                                lineNumber: 854,
+                                lineNumber: 649,
                                 columnNumber: 13
                             }, this),
                             view === 'dashboard' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2056,8 +2372,8 @@ function HomePage({ user }) {
                                         history: journalHistory
                                     }, void 0, false, {
                                         fileName: "[project]/aura-frontend/app/page.tsx",
-                                        lineNumber: 883,
-                                        columnNumber: 15
+                                        lineNumber: 660,
+                                        columnNumber: 81
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(GoalTracker, {
                                         habits: habits,
@@ -2065,39 +2381,51 @@ function HomePage({ user }) {
                                         onReset: handleHabitReset
                                     }, void 0, false, {
                                         fileName: "[project]/aura-frontend/app/page.tsx",
-                                        lineNumber: 884,
-                                        columnNumber: 15
+                                        lineNumber: 660,
+                                        columnNumber: 118
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(WeeklySummary, {
                                         history: journalHistory
                                     }, void 0, false, {
                                         fileName: "[project]/aura-frontend/app/page.tsx",
-                                        lineNumber: 885,
-                                        columnNumber: 15
+                                        lineNumber: 660,
+                                        columnNumber: 204
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(JournalHistory, {
                                         history: journalHistory
                                     }, void 0, false, {
                                         fileName: "[project]/aura-frontend/app/page.tsx",
-                                        lineNumber: 886,
-                                        columnNumber: 15
+                                        lineNumber: 660,
+                                        columnNumber: 245
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/aura-frontend/app/page.tsx",
-                                lineNumber: 882,
-                                columnNumber: 13
+                                lineNumber: 660,
+                                columnNumber: 38
+                            }, this),
+                            view === 'support' && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "animate-fade-in space-y-6",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$aura$2d$frontend$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(CounselorList, {}, void 0, false, {
+                                    fileName: "[project]/aura-frontend/app/page.tsx",
+                                    lineNumber: 663,
+                                    columnNumber: 79
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/aura-frontend/app/page.tsx",
+                                lineNumber: 663,
+                                columnNumber: 36
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/aura-frontend/app/page.tsx",
-                        lineNumber: 851,
+                        lineNumber: 644,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/aura-frontend/app/page.tsx",
-                lineNumber: 831,
+                lineNumber: 622,
                 columnNumber: 7
             }, this)
         ]
